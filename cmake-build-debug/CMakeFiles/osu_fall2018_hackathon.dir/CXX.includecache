@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/BankApp.cpp
+iostream
+-
+BankApp.hpp
+C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/BankApp.hpp
+
+C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/BankApp.hpp
+string
+-
+vector
+-
+

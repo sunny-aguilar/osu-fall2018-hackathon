@@ -8,7 +8,7 @@
 
 int main() {
     BankApp b;
-    b.menuTwo();
+    b.introScreen();
 
 
     return 0;
