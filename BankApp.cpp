@@ -339,7 +339,7 @@ void BankApp::loadUserData(const vector<string> &vect) {
     // set account number in private variable
     setAccountNumber(vect[0]);
     // set username in private variable
-    setAccountNumber(vect[2]);
+    setUsername(vect[2]);
     // set checkings and savings objects
 }
 
