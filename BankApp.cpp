@@ -221,10 +221,13 @@ void BankApp::createAccount() {
         savingsAccounts.push_back(s);
     }
 
+    // generate account number and save as a variable
+    string acctNumber = accountNumberGenerator();
+
 }
 
 string BankApp::accountNumberGenerator() {
-    
+
 }
 
 void BankApp::logIn() {
