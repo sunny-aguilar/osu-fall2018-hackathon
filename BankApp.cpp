@@ -6,7 +6,9 @@
 #include <iostream>
 #include "BankApp.hpp"
 
-void BankApp::introScreen() {
+void BankApp::introScreen() 
+{
+    // use raw strings for ascii logo
     std::cout << R"(
         ██████╗ ██████╗ ███████╗ ██████╗  ██████╗ ███╗   ██╗
         ██╔═══██╗██╔══██╗██╔════╝██╔════╝ ██╔═══██╗████╗  ██║
@@ -31,7 +33,8 @@ void BankApp::introScreen() {
     )" << '\n';
 }
 
-void BankApp::menuTwo() {
+void BankApp::menuTwo() 
+{
     char selection = ' ';
 
     do {
