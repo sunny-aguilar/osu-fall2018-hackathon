@@ -3,9 +3,10 @@
 ** Date:            September 6, 2018
 ** Description:     BankingApp class implementation file
 *********************************************************************/
+#include "BankApp.hpp"
+#include "Checkings.hpp"
 #include <iostream>
 #include <regex>                        // regular expression validation
-#include "BankApp.hpp"
 using std::string;
 using std::cout;
 using std::cin;
@@ -210,6 +211,7 @@ void BankApp::createAccount() {
     }
 
     if(accountType == 'c') {
+        Checkings c(initialDeposit);
 
     }
     else if (accountType == 's') {
