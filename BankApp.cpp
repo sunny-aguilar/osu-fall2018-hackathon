@@ -232,6 +232,8 @@ void BankApp::createAccount() {
     outputFile.open(userName + "-" + acctNumber + ".txt");
     outputFile << acctNumber << "\n" << pin;
     outputFile << "\nType: " << accountType;
+    outputFile << "\n" << accountType << "01-" << initialDeposit;
+
 
     cout << "Account was successfully created\n";
 
