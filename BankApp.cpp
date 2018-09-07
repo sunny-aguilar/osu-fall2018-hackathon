@@ -191,6 +191,11 @@ void BankApp::createAccount() {
         cin >> pin;
     }
 
+    // have user select they type of account (checking/savings)
+    char accountType = ' ';
+    cout << "Would you like to open a checking or savings account? Enter c or s: ";
+    cin >> accountType;
+
 }
 
 void BankApp::logIn() {
