@@ -328,7 +328,7 @@ void BankApp::logIn() {                     // log in to account
                 cout << "Have a great day!\n\n\n";
 
                 // return user to main menu
-                mainMenu();
+                subMenu();
             }
         }
 
