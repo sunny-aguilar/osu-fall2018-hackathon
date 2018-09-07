@@ -9,6 +9,8 @@
 C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/BankApp.cpp
 iostream
 -
+regex
+-
 BankApp.hpp
 C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/BankApp.hpp
 
@@ -17,4 +19,22 @@ string
 -
 vector
 -
+
+C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/Checkings.cpp
+Checkings.hpp
+C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/Checkings.hpp
+
+C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/Checkings.hpp
+
+C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/Savings.cpp
+Savings.hpp
+C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/Savings.hpp
+
+C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/Savings.hpp
+
+C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/main.cpp
+iostream
+-
+BankApp.hpp
+C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/BankApp.hpp
 

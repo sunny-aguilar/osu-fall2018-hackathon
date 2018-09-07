@@ -59,13 +59,13 @@ void mainFunction()
             {
                 case 'L':
                 {
-                    bank.logIn();
+                    //bank.logIn();
                 }
                     break;
 
                 case 'A':
                 {
-                    bank.createAccount();
+                    //bank.createAccount();
                 }
                     break;
 
@@ -172,6 +172,12 @@ void BankApp::createAccount() {
 
     // username validation using regex
     std::regex usernamePattern("[a-zA-Z0-9]{4,10}");    // regex object and pattern to search
+    std::smatch m;
+
+    while (!std::regex_match(userName, m, usernamePattern)) {      // validate username
+        cout << "Error! Enter a username between 5 and 10 alphanumeric characters and no spacing: ";
+        cin >> userName;
+    }
 
 }
 
