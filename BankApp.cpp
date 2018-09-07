@@ -242,7 +242,7 @@ void BankApp::createAccount() {
     std::ofstream outputFile;
     outputFile.open(userName + "-" + acctNumber + ".txt");
     outputFile << acctNumber << "\n" << pin;
-    outputFile << "\nType: " << accountType;
+    outputFile << "\nType:" << accountType;
     outputFile << "\n" << accountType << "01-" << initialDeposit;
 
     cout << "Account was successfully created\n";
@@ -290,16 +290,18 @@ void BankApp::logIn() {                     // log in to account
 
     // check if filename exists
     if (inputFile) {
-        do {
+//        do {
             cout << "Validating user...";
-            string fileInput;
+            string fileData;
 //            for (int pos{0}; pos < userData.size(); pos++)
 //                cin >> userData[pos];
-            while(cin >> fileInput)
-                userData.push_back(fileInput);
+            while(inputFile >> fileData) {
+                userData.push_back(fileData);
+                cout << "\nreading data...";
+            }
 
-
-        } while (inputFile >> validPin);
+            cout << "\n reading completed";
+//        } while (inputFile >> validPin);
 
         for (int pos{0}; pos < userData.size(); pos++)
             cout << userData[pos] << " ";
