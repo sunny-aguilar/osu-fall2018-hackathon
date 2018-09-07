@@ -252,17 +252,31 @@ string BankApp::accountNumberGenerator() {
 }
 
 void BankApp::logIn() {                     // log in to account
+    // set up variables
     string userName;
     string accountNumber;
     int pin;
     int validPin {false};
 
+    // ask user for login info
     cout << "Enter your username: ";
     cin >> userName;
     cout << "Enter your account number: ";
     cin >> accountNumber;
     cout << "Enter your 4 digit pin: ";
     cin >> pin;
+
+    // create filename from user entered data
+    std::ifstream inputFile;
+    inputFile.open(userName + "-" + accountNumber + ".txt");
+
+    // check if filename exists
+    if () {
+
+    }
+    else {
+
+    }
 
 }
 
