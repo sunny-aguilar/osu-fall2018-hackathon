@@ -94,6 +94,12 @@
 		<Unit filename="C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/Checkings.hpp">
 			<Option target="osu_fall2018_hackathon"/>
 		</Unit>
+		<Unit filename="C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/Savings.cpp">
+			<Option target="osu_fall2018_hackathon"/>
+		</Unit>
+		<Unit filename="C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/Savings.hpp">
+			<Option target="osu_fall2018_hackathon"/>
+		</Unit>
 		<Unit filename="C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/main.cpp">
 			<Option target="osu_fall2018_hackathon"/>
 		</Unit>

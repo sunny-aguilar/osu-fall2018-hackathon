@@ -178,6 +178,33 @@ Checkings.cpp.s:
 	$(MAKE) -f CMakeFiles\osu_fall2018_hackathon.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\osu_fall2018_hackathon.dir\Checkings.cpp.s
 .PHONY : Checkings.cpp.s
 
+Savings.obj: Savings.cpp.obj
+
+.PHONY : Savings.obj
+
+# target to build an object file
+Savings.cpp.obj:
+	$(MAKE) -f CMakeFiles\osu_fall2018_hackathon.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\osu_fall2018_hackathon.dir\Savings.cpp.obj
+.PHONY : Savings.cpp.obj
+
+Savings.i: Savings.cpp.i
+
+.PHONY : Savings.i
+
+# target to preprocess a source file
+Savings.cpp.i:
+	$(MAKE) -f CMakeFiles\osu_fall2018_hackathon.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\osu_fall2018_hackathon.dir\Savings.cpp.i
+.PHONY : Savings.cpp.i
+
+Savings.s: Savings.cpp.s
+
+.PHONY : Savings.s
+
+# target to generate assembly for a file
+Savings.cpp.s:
+	$(MAKE) -f CMakeFiles\osu_fall2018_hackathon.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\osu_fall2018_hackathon.dir\Savings.cpp.s
+.PHONY : Savings.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -220,6 +247,9 @@ help:
 	@echo ... Checkings.obj
 	@echo ... Checkings.i
 	@echo ... Checkings.s
+	@echo ... Savings.obj
+	@echo ... Savings.i
+	@echo ... Savings.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

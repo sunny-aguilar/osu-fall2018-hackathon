@@ -8,4 +8,4 @@
 
 
 
-#endif //OSU_FALL2018_HACKATHON_BANKAPP_HPP
+#endif // BANKAPP_HPP
