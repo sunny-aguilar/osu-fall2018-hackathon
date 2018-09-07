@@ -20,6 +20,7 @@ class BankApp {
 
     public:
         void introScreen();
+        void menuTwo();
 
 };
 

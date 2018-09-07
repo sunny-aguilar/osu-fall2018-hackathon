@@ -3,87 +3,84 @@
 ** Date:            September 6, 2018
 ** Description:     BankingApp class implementation file
 *********************************************************************/
-<<<<<<< HEAD
+#include <iostream>
 #include "BankApp.hpp"
-=======
 
-void menuTwo()
-     {
-             do
-             {
-                 // Display menu
-                 std::cout << "V - View your Account" << std::endl;
-                 std::cout << "M - Make A Deposit" << std::endl;
-                 std::cout << "W - Withdraw" << std::endl;
-                 std::cout << "T - Transfer Funds" << std::endl;
-                 std::cout << "S - View Transactions" << std::endl;
-                 std::cout << "U - Update Account Details" << std::endl;
-                 std::cout << "C - Close Account" << std::endl;
-                 std::cout << "Q - Exit Menu" << std::endl;
-                 std::cout << "\nEnter your choice: ";
 
-                 std::cin >> selection;
+void menuTwo() {
+    char selection = ' ';
 
-                 // use toupper function to make all letters capital
-                 selection = toupper(selection);
+    do {
+        // Display menu
+        std::cout << "V - View your Account" << std::endl;
+        std::cout << "M - Make A Deposit" << std::endl;
+        std::cout << "W - Withdraw" << std::endl;
+        std::cout << "T - Transfer Funds" << std::endl;
+        std::cout << "S - View Transactions" << std::endl;
+        std::cout << "U - Update Account Details" << std::endl;
+        std::cout << "C - Close Account" << std::endl;
+        std::cout << "Q - Exit Menu" << std::endl;
+        std::cout << "\nEnter your choice: ";
 
-                 // switch selection choices from menu
-                 switch (selection)
-                 {
-                     case 'V':
-                     {
+        std::cin >> selection;
 
-                     }
-                         break;
+        // use toupper function to make all letters capital
+        selection = toupper(selection);
 
-                     case 'M':
-                     {
+        // switch selection choices from menu
+        switch (selection) {
+            case 'V': {
 
-                     }
-                         break;
+            }
+            break;
 
-                     case 'W':
-                     {
+            case 'M':
+            {
 
-                     }
-                         break;
+            }
+            break;
 
-                     case 'T':
-                     {
+            case 'W':
+            {
 
-                     }
-                         break;
+            }
+            break;
 
-                     case 'S':
-                     {
+            case 'T':
+            {
 
-                     }
-                         break;
+            }
+            break;
 
-                     case 'U':
-                     {
+            case 'S':
+            {
 
-                     }
-                         break;
+            }
+            break;
 
-                     case 'C':
-                     {
+            case 'U':
+            {
 
-                     }
-                         break;
+            }
+            break;
 
-                     case 'Q':
-                     {
+            case 'C':
+            {
 
-                     }
-                         break;
+            }
+            break;
 
-                     default:
-                     {
+            case 'Q':
+            {
+
+            }
+            break;
+
+            default:
+            {
                          std::cout << "Unknown selection, please try again" << std::endl;
-                     }
-                 }
+            }
+        }
 
-             }while(selection != 'q' && selection != 'Q');
-     }
->>>>>>> 2b58be8168c63fafd48a90e7dd5a25298aad8a2a
+    } while (selection != 'q' && selection != 'Q');
+}

@@ -4,9 +4,11 @@
 ** Description:     OSU banking app
 *********************************************************************/
 #include <iostream>
+#include "BankApp.hpp"
 
 int main() {
-
+    BankApp b;
+    b.menuTwo();
 
 
     return 0;
