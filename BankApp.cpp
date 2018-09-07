@@ -249,7 +249,7 @@ void BankApp::createAccount() {
     // append username to account number and write to file
     std::ofstream outputFile;
     outputFile.open(userName + "-" + acctNumber + ".txt");
-    outputFile << acctNumber << "\n" << pin;
+    outputFile << acctNumber << "\n" << pin << "\n" << userName;
     outputFile << "\nType:" << accountType;
     outputFile << "\n" << accountType << "01-" << initialDeposit;
 
@@ -336,5 +336,18 @@ void BankApp::logIn() {                     // log in to account
 ** Description:     loads user data into bank app
 *********************************************************************/
 void BankApp::loadUserData(const vector<string> &vect) {
+    // set account number in private variable
+    setAccountNumber(vect[0]);
+    // set username in private variable
+    setAccountNumber(vect[2]);
+    // set checkings and savings objects
+}
 
+string BankApp::setAccountNumber(string accountNumber) {
+    this->accountNumber = accountNumber;
+    return accountNumber;
+}
+
+string BankApp::setUsername(string username) {
+    this->username = username;
 }

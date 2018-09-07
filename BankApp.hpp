@@ -30,6 +30,8 @@ class BankApp {
         void createAccount();
         void logIn();
         void loadUserData(const vector<string> &vect);
+        string setAccountNumber(string accountNumber);
+        string setUsername(string username);
 };
 
 #endif                              // end of preprocessor directive
