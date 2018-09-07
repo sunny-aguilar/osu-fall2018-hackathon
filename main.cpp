@@ -11,8 +11,10 @@
 int main() {
     BankApp bank;                               // create bank object
     bank.introScreen();                         // show intro screen
-    bank.createAccount();
-    bank.logIn();
+//    bank.createAccount();
+    bank.mainMenu();
+//    bank.logIn();
+
 
     return 0;
 }

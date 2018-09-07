@@ -7,6 +7,7 @@
 #include "Checkings.hpp"
 #include "Savings.hpp"
 #include <iostream>
+#include <string>
 #include <fstream>                      // filestream operations
 #include <regex>                        // regular expression validation
 #include <ctime>                        // time function
@@ -67,7 +68,9 @@ void BankApp::mainMenu()
             std::cout << "Q - Quit Program" << std::endl;
             std::cout << "\nEnter your choice: ";
 
-            std::cin >> selection;
+            // ask user for selection input
+            cin.get(selection);
+            cin.ignore();
 
             // use toupper function to make all letters capital
             selection = toupper(selection);
@@ -77,13 +80,13 @@ void BankApp::mainMenu()
             {
                 case 'L':
                 {
-                    //logIn();
+                    logIn();
                 }
                     break;
 
                 case 'A':
                 {
-                    //createAccount();
+                    createAccount();
                 }
                     break;
 
@@ -199,7 +202,7 @@ void BankApp::createAccount() {
     std::smatch m;
 
     while (!std::regex_match(userName, m, usernamePattern)) {      // validate username
-        cout << "Error! Enter a username between 5 and 10 alphanumeric characters and no spacing: ";
+        cout << "\nError! Enter a username between 5 and 10 alphanumeric characters and no spacing: ";
         cin >> userName;
     }
 
@@ -350,4 +353,5 @@ string BankApp::setAccountNumber(string accountNumber) {
 
 string BankApp::setUsername(string username) {
     this->username = username;
+    return accountNumber;
 }
