@@ -304,12 +304,14 @@ void BankApp::logIn() {                     // log in to account
             while(inputFile >> fileData)
                 userData.push_back(fileData);
 
-            // load user data into BankApp
-            loadUserData(userData);
 
             // check pin # stored in file to user entered pin
-            if (pin == userData[1])
+            if (pin == userData[1]) {
                 cout << "\nLogin successful";
+            }
+
+            // load user data into BankApp
+            loadUserData(userData);
         }
         else {
             cout << "This user account was not found\n"
