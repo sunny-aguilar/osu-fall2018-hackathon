@@ -235,6 +235,7 @@ void BankApp::createAccount() {
 
     cout << "Account was successfully created\n";
 
+    outputFile.close();                 // close file
 }
 
 string BankApp::accountNumberGenerator() {
