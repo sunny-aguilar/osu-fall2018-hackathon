@@ -290,7 +290,7 @@ string BankApp::accountNumberGenerator() {
 void BankApp::logIn() {                     // log in to account
     // set up variables
     char go = 'n';
-    string userName;
+    string user;
     string accountNumber;
     string pin;
     vector<string> userData;
@@ -298,7 +298,7 @@ void BankApp::logIn() {                     // log in to account
     do {
         // ask user for login info
         cout << "Enter your username: ";
-        cin >> userName;
+        cin >> user;
         cout << "Enter your account number: ";
         cin >> accountNumber;
         cout << "Enter your 4 digit pin: ";
@@ -306,7 +306,7 @@ void BankApp::logIn() {                     // log in to account
 
         // create filename from user entered data
         std::ifstream inputFile;
-        inputFile.open(userName + "-" + accountNumber + ".txt");
+        inputFile.open(user + "-" + accountNumber + ".txt");
 
         // check if filename exists
         if (inputFile) {
@@ -321,12 +321,15 @@ void BankApp::logIn() {                     // log in to account
 
             // check pin # stored in file to user entered pin
             if (pin == userData[1]) {
-                cout << "\nLogin successful";
+                cout << "\nLogin successful\n";
             }
 
             // load user data into BankApp
             // pass vector w/user data into function to load it
             loadUserData(userData);
+
+            // check that data was loaded
+
         }
         else {
             cout << "This user account was not found\n"
@@ -354,12 +357,30 @@ void BankApp::loadUserData(const vector<string> &vect) {
     // set checkings and savings objects
 }
 
-string BankApp::setAccountNumber(string accountNumber) {
+/*********************************************************************
+** Description:     setter function for account number
+*********************************************************************/
+void BankApp::setAccountNumber(string accountNumber) {
     this->accountNumber = accountNumber;
+}
+
+/*********************************************************************
+** Description:     setter function for username
+*********************************************************************/
+void BankApp::setUsername(string username) {
+    this->username = username;
+}
+
+/*********************************************************************
+** Description:     getter function for accountNumber
+*********************************************************************/
+string BankApp::getAccountNumber() {
     return accountNumber;
 }
 
-string BankApp::setUsername(string username) {
-    this->username = username;
-    return accountNumber;
+/*********************************************************************
+** Description:     getter function for username
+*********************************************************************/
+string BankApp::getUsername() {
+    return username;
 }
