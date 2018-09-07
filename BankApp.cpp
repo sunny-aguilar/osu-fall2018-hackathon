@@ -202,6 +202,8 @@ void BankApp::createAccount() {
 
     // ask user for a initial deposit amount
     double initialDeposit {0};
+    cout << "How much would you like to deposit into tyour account? ";
+    cin >> initialDeposit;
 
 }
 
