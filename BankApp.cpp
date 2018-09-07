@@ -57,7 +57,10 @@ void BankApp::mainMenu()
         do
         {
             // Display banner
-            cout << ":::::::: WELCOME TO OSU STATE BANK :::::::: " << endl;
+            cout << "... ... ... ... ... ... ... ... ... ... ... ... ...\n"
+                    ":::::::::::: WELCOME TO OSU STATE BANK ::::::::::::\n"
+                    "... ... ... ... ... ... ... ... ... ... ... ... ...\n";
+
             // Display menu
             std::cout << "L - Log into account" << std::endl;
             std::cout << "A - Open an account" << std::endl;
@@ -313,7 +316,7 @@ void BankApp::logIn() {                     // log in to account
                  << "Would you like to try again?\n";
             cin >> go;
             if(toupper(go) != 'Y') {
-                cout << "Have a great day!\n\n";
+                cout << "Have a great day!\n\n\n";
 
                 // return user to main menu
                 mainMenu();
