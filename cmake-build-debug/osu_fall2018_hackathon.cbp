@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/BankApp.cpp">
+			<Option target="osu_fall2018_hackathon"/>
+		</Unit>
+		<Unit filename="C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/BankApp.hpp">
+			<Option target="osu_fall2018_hackathon"/>
+		</Unit>
 		<Unit filename="C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/main.cpp">
 			<Option target="osu_fall2018_hackathon"/>
 		</Unit>

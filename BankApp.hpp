@@ -1,23 +1,11 @@
 /*********************************************************************
 ** Author:          Sandro Aguilar, Kuljot Biring and Christian Martinez
 ** Date:            September 6, 2018
-** Description:     OSU banking app
+** Description:     BankingApp class specification file
 *********************************************************************/
-#include <iostream>
-
-class BankApp {
-    private:
-
-
-    public:
-        std::string accountNumber;
-        std::string username;
-
-};
-
-int main() {
+#ifndef OSU_FALL2018_HACKATHON_BANKAPP_HPP
+#define OSU_FALL2018_HACKATHON_BANKAPP_HPP
 
 
 
-    return 0;
-}
+#endif //OSU_FALL2018_HACKATHON_BANKAPP_HPP

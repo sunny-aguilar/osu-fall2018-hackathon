@@ -124,6 +124,33 @@ osu_fall2018_hackathon\fast:
 	$(MAKE) -f CMakeFiles\osu_fall2018_hackathon.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\osu_fall2018_hackathon.dir\build
 .PHONY : osu_fall2018_hackathon\fast
 
+BankApp.obj: BankApp.cpp.obj
+
+.PHONY : BankApp.obj
+
+# target to build an object file
+BankApp.cpp.obj:
+	$(MAKE) -f CMakeFiles\osu_fall2018_hackathon.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\osu_fall2018_hackathon.dir\BankApp.cpp.obj
+.PHONY : BankApp.cpp.obj
+
+BankApp.i: BankApp.cpp.i
+
+.PHONY : BankApp.i
+
+# target to preprocess a source file
+BankApp.cpp.i:
+	$(MAKE) -f CMakeFiles\osu_fall2018_hackathon.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\osu_fall2018_hackathon.dir\BankApp.cpp.i
+.PHONY : BankApp.cpp.i
+
+BankApp.s: BankApp.cpp.s
+
+.PHONY : BankApp.s
+
+# target to generate assembly for a file
+BankApp.cpp.s:
+	$(MAKE) -f CMakeFiles\osu_fall2018_hackathon.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\osu_fall2018_hackathon.dir\BankApp.cpp.s
+.PHONY : BankApp.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -160,6 +187,9 @@ help:
 	@echo ... osu_fall2018_hackathon
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... BankApp.obj
+	@echo ... BankApp.i
+	@echo ... BankApp.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -77,17 +77,38 @@ CMakeFiles\osu_fall2018_hackathon.dir\main.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\osu_fall2018_hackathon.dir\main.cpp.s /c C:\Users\Sandro\Documents\Programming\CPP\osu-hackathon-fall2018\osu-fall2018-hackathon\main.cpp
 <<
 
+CMakeFiles\osu_fall2018_hackathon.dir\BankApp.cpp.obj: CMakeFiles\osu_fall2018_hackathon.dir\flags.make
+CMakeFiles\osu_fall2018_hackathon.dir\BankApp.cpp.obj: ..\BankApp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Sandro\Documents\Programming\CPP\osu-hackathon-fall2018\osu-fall2018-hackathon\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/osu_fall2018_hackathon.dir/BankApp.cpp.obj"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\osu_fall2018_hackathon.dir\BankApp.cpp.obj /FdCMakeFiles\osu_fall2018_hackathon.dir\ /FS -c C:\Users\Sandro\Documents\Programming\CPP\osu-hackathon-fall2018\osu-fall2018-hackathon\BankApp.cpp
+<<
+
+CMakeFiles\osu_fall2018_hackathon.dir\BankApp.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/osu_fall2018_hackathon.dir/BankApp.cpp.i"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe > CMakeFiles\osu_fall2018_hackathon.dir\BankApp.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Sandro\Documents\Programming\CPP\osu-hackathon-fall2018\osu-fall2018-hackathon\BankApp.cpp
+<<
+
+CMakeFiles\osu_fall2018_hackathon.dir\BankApp.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/osu_fall2018_hackathon.dir/BankApp.cpp.s"
+	C:\PROGRA~2\MICROS~1.0\VC\bin\cl.exe @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\osu_fall2018_hackathon.dir\BankApp.cpp.s /c C:\Users\Sandro\Documents\Programming\CPP\osu-hackathon-fall2018\osu-fall2018-hackathon\BankApp.cpp
+<<
+
 # Object files for target osu_fall2018_hackathon
 osu_fall2018_hackathon_OBJECTS = \
-"CMakeFiles\osu_fall2018_hackathon.dir\main.cpp.obj"
+"CMakeFiles\osu_fall2018_hackathon.dir\main.cpp.obj" \
+"CMakeFiles\osu_fall2018_hackathon.dir\BankApp.cpp.obj"
 
 # External object files for target osu_fall2018_hackathon
 osu_fall2018_hackathon_EXTERNAL_OBJECTS =
 
 osu_fall2018_hackathon.exe: CMakeFiles\osu_fall2018_hackathon.dir\main.cpp.obj
+osu_fall2018_hackathon.exe: CMakeFiles\osu_fall2018_hackathon.dir\BankApp.cpp.obj
 osu_fall2018_hackathon.exe: CMakeFiles\osu_fall2018_hackathon.dir\build.make
 osu_fall2018_hackathon.exe: CMakeFiles\osu_fall2018_hackathon.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Sandro\Documents\Programming\CPP\osu-hackathon-fall2018\osu-fall2018-hackathon\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable osu_fall2018_hackathon.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Sandro\Documents\Programming\CPP\osu-hackathon-fall2018\osu-fall2018-hackathon\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable osu_fall2018_hackathon.exe"
 	"C:\Program Files\JetBrains\CLion 2018.2.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\osu_fall2018_hackathon.dir --manifests  -- C:\PROGRA~2\MICROS~1.0\VC\bin\link.exe /nologo @CMakeFiles\osu_fall2018_hackathon.dir\objects1.rsp @<<
  /out:osu_fall2018_hackathon.exe /implib:osu_fall2018_hackathon.lib /pdb:C:\Users\Sandro\Documents\Programming\CPP\osu-hackathon-fall2018\osu-fall2018-hackathon\cmake-build-debug\osu_fall2018_hackathon.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
