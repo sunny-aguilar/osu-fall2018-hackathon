@@ -223,6 +223,10 @@ void BankApp::createAccount() {
 
 }
 
+string BankApp::accountNumberGenerator() {
+    
+}
+
 void BankApp::logIn() {
     
 }
