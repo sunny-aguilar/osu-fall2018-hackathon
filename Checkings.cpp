@@ -4,3 +4,12 @@
 ** Description:     Checkings class implementation file
 *********************************************************************/
 #include "Checkings.hpp"
+
+/*********************************************************************
+** Description:     1-arg constructor
+*********************************************************************/
+Checkings::Checkings(double deposit)
+        : checkingsBalance{deposit} {
+}
+
+

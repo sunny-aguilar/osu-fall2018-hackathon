@@ -4,3 +4,12 @@
 ** Description:     Savings class implementation file
 *********************************************************************/
 #include "Savings.hpp"
+
+/*********************************************************************
+** Description:     1-arg constructor
+*********************************************************************/
+Savings::Savings(double deposit)
+        : savingsBalance{deposit} {
+}
+
+

@@ -213,7 +213,7 @@ void BankApp::createAccount() {
 
     }
     else if (accountType == 's') {
-        
+
     }
 
 }
