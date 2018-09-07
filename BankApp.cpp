@@ -257,7 +257,12 @@ void BankApp::logIn() {                     // log in to account
     int pin;
     int validPin {false};
 
-
+    cout << "Enter your username: ";
+    cin >> userName;
+    cout << "Enter your account number: ";
+    cin >> accountNumber;
+    cout << "Enter your 4 digit pin: ";
+    cin >> pin;
 
 }
 
