@@ -108,3 +108,15 @@ void BankApp::menuTwo() {
 
     } while (selection != 'q' && selection != 'Q');
 }
+
+
+
+void BankApp::createAccount() {
+
+
+}
+
+void BankApp::logIn() {
+
+    
+}
