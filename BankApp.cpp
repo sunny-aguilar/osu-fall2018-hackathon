@@ -4,6 +4,7 @@
 ** Description:     BankingApp class implementation file
 *********************************************************************/
 #include <iostream>
+#include <regex>                        // regular expression validation
 #include "BankApp.hpp"
 using std::string;
 using std::cout;
@@ -121,7 +122,8 @@ void BankApp::createAccount() {
     cout << "Enter a username between 4 and 10 alphanumeric characters: ";
     getline(cin, userName);
 
-    
+    // username validation using regex
+    std::regex usernamePattern("[a-zA-Z0-9]{4,10}");    // regex object and pattern to search
 
 }
 
