@@ -14,6 +14,10 @@
     <list default="true" id="c800790f-e9d6-479a-aad5-970bc587ecff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BankApp.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/BankApp.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BankApp.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/BankApp.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sunny-OSU-8BW00W1B37HT6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sunny-OSU-DQCB1R04AI6I3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/sunny-OSU-TQH5Z5AN2AUG8.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +37,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="2186" />
+          <entry key="cpp" value="2279" />
           <entry key="hpp" value="271" />
           <entry key="txt" value="1" />
         </counts>
@@ -41,7 +45,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="1" />
-          <entry key="ObjectiveC" value="2457" />
+          <entry key="ObjectiveC" value="2550" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -80,7 +84,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BankApp.hpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1050">
@@ -92,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BankApp.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="165" column="13" lean-forward="true" selection-start-line="165" selection-start-column="13" selection-end-line="165" selection-end-column="13" />
+            <state relative-caret-position="1862">
+              <caret line="338" lean-forward="true" selection-start-line="338" selection-end-line="338" />
               <folding>
                 <element signature="e#310#332#0" expanded="true" />
               </folding>
@@ -159,8 +163,8 @@
         <option value="$PROJECT_DIR$/Checkings.cpp" />
         <option value="$PROJECT_DIR$/Savings.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/BankApp.hpp" />
         <option value="$PROJECT_DIR$/BankApp.cpp" />
+        <option value="$PROJECT_DIR$/BankApp.hpp" />
       </list>
     </option>
   </component>
@@ -239,12 +243,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1536284259917</updated>
-      <workItem from="1536284264596" duration="21149000" />
+      <workItem from="1536284264596" duration="21724000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21149000" />
+    <option name="totallyTimeSpent" value="21724000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3840" y="-368" width="1436" height="2284" extended-state="0" />
@@ -261,7 +265,7 @@
       <window_info anchor="bottom" id="CMake" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32883722" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32883722" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -303,24 +307,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BankApp.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="e#349#373#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Checkings.cpp">
+    <entry file="file://$PROJECT_DIR$/Savings.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Savings.cpp">
+    <entry file="file://$PROJECT_DIR$/Checkings.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
@@ -336,10 +330,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BankApp.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="165" column="13" lean-forward="true" selection-start-line="165" selection-start-column="13" selection-end-line="165" selection-end-column="13" />
+        <state relative-caret-position="1862">
+          <caret line="338" lean-forward="true" selection-start-line="338" selection-end-line="338" />
           <folding>
             <element signature="e#310#332#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BankApp.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#349#373#0" expanded="true" />
           </folding>
         </state>
       </provider>

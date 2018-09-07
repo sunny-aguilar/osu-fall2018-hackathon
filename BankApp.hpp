@@ -15,18 +15,18 @@ using std::vector;
 class BankApp {
     private:
         // hold checkings and savings accounts
-        std::vector<Checkings> checkingAccounts;
-        std::vector<Savings> savingsAccounts;
+        vector<Checkings> checkingAccounts;
+        vector<Savings> savingsAccounts;
 
         // variables to hold user account info
-        std::string accountNumber;
-        std::string username;
+        string accountNumber;
+        string username;
 
     public:
         void introScreen();
         void mainMenu();
         void subMenu();
-        std::string accountNumberGenerator();
+        string accountNumberGenerator();
         void createAccount();
         void logIn();
         void loadUserData(const vector<string> &vect);

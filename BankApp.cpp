@@ -301,7 +301,8 @@ void BankApp::logIn() {                     // log in to account
         if (inputFile) {
             cout << "Validating user...";
 
-            // store file data in array
+            // store user file data in array
+            // user data stored in vector
             string fileData;
             while(inputFile >> fileData)
                 userData.push_back(fileData);
@@ -313,6 +314,7 @@ void BankApp::logIn() {                     // log in to account
             }
 
             // load user data into BankApp
+            // pass vector w/user data into function to load it
             loadUserData(userData);
         }
         else {
