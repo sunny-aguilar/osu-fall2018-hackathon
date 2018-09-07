@@ -8,7 +8,7 @@
 
 class Savings {
     private:
-
+        double savingsBalance;
 
     public:
 

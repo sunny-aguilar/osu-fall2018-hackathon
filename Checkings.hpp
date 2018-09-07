@@ -8,7 +8,7 @@
 
 class Checkings {
     private:
-
+        double checkingsBalance;
 
     public:
 
