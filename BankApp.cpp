@@ -234,7 +234,6 @@ void BankApp::createAccount() {
     outputFile << "\nType: " << accountType;
     outputFile << "\n" << accountType << "01-" << initialDeposit;
 
-
     cout << "Account was successfully created\n";
 
     outputFile.close();                 // close file
@@ -254,8 +253,9 @@ string BankApp::accountNumberGenerator() {
 
 void BankApp::logIn() {                     // log in to account
     string userName;
-
-
+    string accountNumber;
+    int pin;
+    int validPin {false};
 
 
 
