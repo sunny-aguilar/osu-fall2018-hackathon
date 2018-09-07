@@ -271,41 +271,54 @@ string BankApp::accountNumberGenerator() {
 *********************************************************************/
 void BankApp::logIn() {                     // log in to account
     // set up variables
+    char go = 'n';
     string userName;
     string accountNumber;
     string pin;
     vector<string> userData;
 
-    // ask user for login info
-    cout << "Enter your username: ";
-    cin >> userName;
-    cout << "Enter your account number: ";
-    cin >> accountNumber;
-    cout << "Enter your 4 digit pin: ";
-    cin >> pin;
+    do {
+        // ask user for login info
+        cout << "Enter your username: ";
+        cin >> userName;
+        cout << "Enter your account number: ";
+        cin >> accountNumber;
+        cout << "Enter your 4 digit pin: ";
+        cin >> pin;
 
-    // create filename from user entered data
-    std::ifstream inputFile;
-    inputFile.open(userName + "-" + accountNumber + ".txt");
+        // create filename from user entered data
+        std::ifstream inputFile;
+        inputFile.open(userName + "-" + accountNumber + ".txt");
 
-    // check if filename exists
-    if (inputFile) {
-        cout << "Validating user...";
+        // check if filename exists
+        if (inputFile) {
+            cout << "Validating user...";
 
-        // store file data in array
-        string fileData;
-        while(inputFile >> fileData)
-            userData.push_back(fileData);
+            // store file data in array
+            string fileData;
+            while(inputFile >> fileData)
+                userData.push_back(fileData);
 
-        // load user data into BankApp
-        loadUserData(userData);
+            // load user data into BankApp
+            loadUserData(userData);
 
-        // check pin # stored in file to user entered pin
-        if (pin == userData[1])
-            cout << "\nLogin successful";
-    }
-    else
-        cout << "This user account was not found";
+            // check pin # stored in file to user entered pin
+            if (pin == userData[1])
+                cout << "\nLogin successful";
+        }
+        else {
+            cout << "This user account was not found\n"
+                 << "Would you like to try again?\n";
+            cin >> go;
+            if(toupper(go) != 'Y') {
+                cout << "Have a great day!\n\n";
+
+                // return user to main menu
+                mainMenu();
+            }
+        }
+
+    } while (toupper(go) == 'Y');
 }
 
 /*********************************************************************
