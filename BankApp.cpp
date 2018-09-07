@@ -230,6 +230,8 @@ void BankApp::createAccount() {
     // append username to account number and write to file
     std::ofstream outputFile;
     outputFile.open(userName + "-" + acctNumber + ".txt");
+    outputFile << acctNumber << "\n" << pin;
+    outputFile << "\nType: " << accountType;
 
 }
 

@@ -32,7 +32,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="682" />
+          <entry key="cpp" value="683" />
           <entry key="hpp" value="190" />
           <entry key="txt" value="1" />
         </counts>
@@ -40,7 +40,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="1" />
-          <entry key="ObjectiveC" value="872" />
+          <entry key="ObjectiveC" value="873" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -91,8 +91,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BankApp.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1352">
-              <caret line="231" column="58" selection-start-line="231" selection-start-column="58" selection-end-line="231" selection-end-column="58" />
+            <state relative-caret-position="1532">
+              <caret line="233" column="44" lean-forward="true" selection-start-line="233" selection-start-column="44" selection-end-line="233" selection-end-column="44" />
               <folding>
                 <element signature="e#310#332#0" expanded="true" />
               </folding>
@@ -230,12 +230,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1536284259917</updated>
-      <workItem from="1536284264596" duration="12330000" />
+      <workItem from="1536284264596" duration="12958000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12330000" />
+    <option name="totallyTimeSpent" value="12958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3840" y="-368" width="1436" height="2284" extended-state="0" />
@@ -324,8 +324,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BankApp.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1352">
-          <caret line="231" column="58" selection-start-line="231" selection-start-column="58" selection-end-line="231" selection-end-column="58" />
+        <state relative-caret-position="1532">
+          <caret line="233" column="44" lean-forward="true" selection-start-line="233" selection-start-column="44" selection-end-line="233" selection-end-column="44" />
           <folding>
             <element signature="e#310#332#0" expanded="true" />
           </folding>
