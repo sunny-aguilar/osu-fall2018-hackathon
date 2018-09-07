@@ -184,6 +184,13 @@ void BankApp::createAccount() {
     cout << "Enter a 4 digit pin (0-9): ";
     cin >> pin;
 
+    // pin validation using regex
+    std::regex pinPattern("[0-9]{4}");
+    while (!std::regex_match(pin, m, pinPattern)) {      // validate username
+        cout << "Error! Enter a pin 4 characters long and no spacing: ";
+        cin >> pin;
+    }
+
 }
 
 void BankApp::logIn() {
