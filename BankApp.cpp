@@ -296,7 +296,7 @@ void BankApp::logIn() {                     // log in to account
         while(inputFile >> fileData)
             userData.push_back(fileData);
 
-        cout << "\n reading completed";
+        loadUserData(userData);
 
         // check pin # stored in file to user entered pin
         if (pin == userData[1])
@@ -306,6 +306,9 @@ void BankApp::logIn() {                     // log in to account
         cout << "This user account was not found";
 }
 
-void BankApp::loadUserData() {
+/*********************************************************************
+** Description:     loads user data into bank app
+*********************************************************************/
+void BankApp::loadUserData(std::vector<string> vect) {
     
 }

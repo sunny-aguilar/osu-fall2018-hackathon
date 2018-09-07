@@ -27,7 +27,7 @@ class BankApp {
         std::string accountNumberGenerator();
         void createAccount();
         void logIn();
-        void loadUserData();
+        void loadUserData(std::vector<std::string> vect);
 };
 
 #endif                              // end of preprocessor directive
