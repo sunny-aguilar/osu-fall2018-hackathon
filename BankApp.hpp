@@ -21,6 +21,9 @@ class BankApp {
     public:
         void introScreen();
         void menuTwo();
+        std::string accountNumberGenerator();
+        void createAccount();
+        void logIn();
 
 };
 
