@@ -31,6 +31,53 @@ void BankApp::introScreen() {
     )" << '\n';
 }
 
+void mainFunction()
+    {
+        char selection {};
+
+        do
+        {
+            // Display menu
+            std::cout << "L - Log into account" << std::endl;
+            std::cout << "A - Open an account" << std::endl;
+            std::cout << "Q - Quit Program" << std::endl;
+            std::cout << "\nEnter your choice: ";
+
+            std::cin >> selection;
+
+            // use toupper function to make all letters capital
+            selection = toupper(selection);
+
+            // switch selection choices from menu
+            switch (selection)
+            {
+                case 'L':
+                {
+                    bank.logIn();
+                }
+                    break;
+
+                case 'A':
+                {
+                    bank.createAccount();
+                }
+                    break;
+
+                case 'Q':
+                {
+                    std::cout << "Goodbye" << std::endl;
+                }
+                    break;
+
+                default:
+                {
+                    std::cout << "Unknown selection, please try again" << std::endl;
+                }
+            }
+
+        }while(selection != 'q' && selection != 'Q');
+    }
+
 void BankApp::menuTwo() {
     char selection = ' ';
 
