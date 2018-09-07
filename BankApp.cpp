@@ -7,6 +7,7 @@
 #include "Checkings.hpp"
 #include "Savings.hpp"
 #include <iostream>
+#include <fstream>                      // filestream operations
 #include <regex>                        // regular expression validation
 #include <ctime>                        // time function
 #include <cstdlib>                      // srand() and rand() functions
@@ -227,7 +228,7 @@ void BankApp::createAccount() {
     string acctNumber = accountNumberGenerator();
 
     // append username to account number and write to file
-    
+
 
 }
 
