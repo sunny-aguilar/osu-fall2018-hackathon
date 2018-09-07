@@ -12,6 +12,7 @@ class Checkings {
 
     public:
         Checkings(double deposit);  //1-arg constructor
+        // add additional member functions here
 
 };
 

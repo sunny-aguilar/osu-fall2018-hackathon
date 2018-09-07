@@ -199,7 +199,7 @@ void BankApp::subMenu() {
 void BankApp::createAccount() {
     // have user create a username
     string userName;
-    cout << "Enter a username between 4 and 10 alphanumeric characters: ";
+    cout << "Create a username between 4 and 10 alphanumeric characters: ";
     getline(cin, userName);
 
     // username validation using regex
@@ -207,19 +207,19 @@ void BankApp::createAccount() {
     std::smatch m;
 
     while (!std::regex_match(userName, m, usernamePattern)) {      // validate username
-        cout << "\nError! Enter a username between 5 and 10 alphanumeric characters and no spacing: ";
+        cout << "\nError! Create a username between 4 and 10 alphanumeric characters and no spacing: ";
         cin >> userName;
     }
 
     // have user create a 4 digit password/pin
     string pin;
-    cout << "Enter a 4 digit pin (0-9): ";
+    cout << "Create a 4 digit pin (0-9): ";
     cin >> pin;
 
     // pin validation using regex
     std::regex pinPattern("[0-9]{4}");
     while (!std::regex_match(pin, m, pinPattern)) {      // validate username
-        cout << "Error! Enter a pin 4 characters long and no spacing: ";
+        cout << "Error! Create a pin 4 characters long and no spacing: ";
         cin >> pin;
     }
 

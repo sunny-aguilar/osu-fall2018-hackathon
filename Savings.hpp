@@ -12,7 +12,7 @@ class Savings {
 
     public:
         Savings(double deposit);    //1-arg constructor
-
+        // add additional member functions here
 };
 
 #endif                              // end of preprocessor directive
