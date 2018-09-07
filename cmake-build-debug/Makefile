@@ -151,6 +151,33 @@ BankApp.cpp.s:
 	$(MAKE) -f CMakeFiles\osu_fall2018_hackathon.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\osu_fall2018_hackathon.dir\BankApp.cpp.s
 .PHONY : BankApp.cpp.s
 
+Checkings.obj: Checkings.cpp.obj
+
+.PHONY : Checkings.obj
+
+# target to build an object file
+Checkings.cpp.obj:
+	$(MAKE) -f CMakeFiles\osu_fall2018_hackathon.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\osu_fall2018_hackathon.dir\Checkings.cpp.obj
+.PHONY : Checkings.cpp.obj
+
+Checkings.i: Checkings.cpp.i
+
+.PHONY : Checkings.i
+
+# target to preprocess a source file
+Checkings.cpp.i:
+	$(MAKE) -f CMakeFiles\osu_fall2018_hackathon.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\osu_fall2018_hackathon.dir\Checkings.cpp.i
+.PHONY : Checkings.cpp.i
+
+Checkings.s: Checkings.cpp.s
+
+.PHONY : Checkings.s
+
+# target to generate assembly for a file
+Checkings.cpp.s:
+	$(MAKE) -f CMakeFiles\osu_fall2018_hackathon.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\osu_fall2018_hackathon.dir\Checkings.cpp.s
+.PHONY : Checkings.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -190,6 +217,9 @@ help:
 	@echo ... BankApp.obj
 	@echo ... BankApp.i
 	@echo ... BankApp.s
+	@echo ... Checkings.obj
+	@echo ... Checkings.i
+	@echo ... Checkings.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

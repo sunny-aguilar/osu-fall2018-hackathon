@@ -3,4 +3,4 @@ project(osu_fall2018_hackathon)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(osu_fall2018_hackathon main.cpp BankApp.cpp BankApp.hpp)
+add_executable(osu_fall2018_hackathon main.cpp BankApp.cpp BankApp.hpp Checkings.hpp Checkings.cpp)

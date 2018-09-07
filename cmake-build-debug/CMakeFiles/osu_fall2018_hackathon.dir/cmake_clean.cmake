@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/osu_fall2018_hackathon.dir/main.cpp.obj"
   "CMakeFiles/osu_fall2018_hackathon.dir/BankApp.cpp.obj"
+  "CMakeFiles/osu_fall2018_hackathon.dir/Checkings.cpp.obj"
   "osu_fall2018_hackathon.pdb"
   "osu_fall2018_hackathon.exe"
   "osu_fall2018_hackathon.exe.manifest"
