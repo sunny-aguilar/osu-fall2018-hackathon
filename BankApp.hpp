@@ -5,14 +5,16 @@
 *********************************************************************/
 #ifndef BANKAPP_HPP
 #define BANKAPP_HPP
+#include "Checkings.hpp"
+#include "Savings.hpp"
 #include <string>
 #include <vector>
 
 class BankApp {
     private:
         // hold checkings and savings accounts
-//        std::vector<Checkings> checkingAccounts;
-//        std::vector<Savings> savingsAccounts;
+        std::vector<Checkings> checkingAccounts;
+        std::vector<Savings> savingsAccounts;
 
         // variables to hold user account info
         std::string accountNumber;

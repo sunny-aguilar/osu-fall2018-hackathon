@@ -214,11 +214,11 @@ void BankApp::createAccount() {
     // set up account object with initial deposit and store in account array
     if(accountType == 'c') {
         Checkings c(initialDeposit);
-
+        checkingAccounts.push_back(c);
     }
     else if (accountType == 's') {
         Savings s(initialDeposit);
-
+        savingsAccounts.push_back(s);
     }
 
 }
