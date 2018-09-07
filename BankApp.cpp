@@ -5,6 +5,10 @@
 *********************************************************************/
 #include <iostream>
 #include "BankApp.hpp"
+using std::string;
+using std::cout;
+using std::cin;
+using std::endl;
 
 void BankApp::introScreen() {
     std::cout << R"(
@@ -112,11 +116,16 @@ void BankApp::menuTwo() {
 
 
 void BankApp::createAccount() {
+    // have user create a username
+    string userName;
+    cout << "Enter a username between 4 and 10 alphanumeric characters: ";
+    getline(cin, userName);
 
+    
 
 }
 
 void BankApp::logIn() {
 
-    
+
 }
