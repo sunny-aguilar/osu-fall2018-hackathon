@@ -272,7 +272,7 @@ void BankApp::logIn() {                     // log in to account
     // set up variables
     string userName;
     string accountNumber;
-    int pin;
+    string pin;
     int validPin {false};
     std::vector<string> userData;
 

@@ -13,7 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c800790f-e9d6-479a-aad5-970bc587ecff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/BankApp.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/BankApp.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/osu_fall2018_hackathon.dir/BankApp.cpp.obj" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +32,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="1292" />
+          <entry key="cpp" value="1298" />
           <entry key="hpp" value="190" />
           <entry key="txt" value="1" />
         </counts>
@@ -41,7 +40,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="1" />
-          <entry key="ObjectiveC" value="1482" />
+          <entry key="ObjectiveC" value="1488" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -95,8 +94,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BankApp.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="297" lean-forward="true" selection-start-line="297" selection-end-line="297" />
+            <state relative-caret-position="405">
+              <caret line="278" column="30" lean-forward="true" selection-start-line="278" selection-start-column="30" selection-end-line="278" selection-end-column="30" />
               <folding>
                 <element signature="e#310#332#0" expanded="true" />
               </folding>
@@ -234,12 +233,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1536284259917</updated>
-      <workItem from="1536284264596" duration="16192000" />
+      <workItem from="1536284264596" duration="16229000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16192000" />
+    <option name="totallyTimeSpent" value="16229000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3840" y="-368" width="1436" height="2284" extended-state="0" />
@@ -331,8 +330,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BankApp.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="297" lean-forward="true" selection-start-line="297" selection-end-line="297" />
+        <state relative-caret-position="405">
+          <caret line="278" column="30" lean-forward="true" selection-start-line="278" selection-start-column="30" selection-end-line="278" selection-end-column="30" />
           <folding>
             <element signature="e#310#332#0" expanded="true" />
           </folding>
