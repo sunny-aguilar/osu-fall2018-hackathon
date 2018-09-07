@@ -112,6 +112,11 @@ void BankApp::subMenu() {
     char selection = ' ';
 
     do {
+        // Display banner
+        cout << "... ... ... ... ... ... ... ... ... ... ... ... ...\n"
+                ":::::::::: SELECT A CHOICE FROM THE MENU ::::::::::\n"
+                "... ... ... ... ... ... ... ... ... ... ... ... ...\n";
+
         // Display menu
         std::cout << "V - View your Account" << std::endl;
         std::cout << "M - Make A Deposit" << std::endl;
@@ -256,9 +261,12 @@ void BankApp::createAccount() {
     outputFile << "\nType:" << accountType;
     outputFile << "\n" << accountType << "01-" << initialDeposit;
 
-    cout << "Account was successfully created\n";
+    cout << "Account was successfully created\n\n\n";
 
     outputFile.close();                 // close file
+
+    // take user to sub menu
+    subMenu();
 }
 
 /*********************************************************************
@@ -327,7 +335,7 @@ void BankApp::logIn() {                     // log in to account
             if(toupper(go) != 'Y') {
                 cout << "Have a great day!\n\n\n";
 
-                // return user to main menu
+                // take user to sub menu
                 subMenu();
             }
         }
