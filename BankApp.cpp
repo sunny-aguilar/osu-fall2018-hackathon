@@ -4,7 +4,12 @@
 ** Description:     BankingApp class implementation file
 *********************************************************************/
 #include <iostream>
+#include <regex>                        // regular expression validation
 #include "BankApp.hpp"
+using std::string;
+using std::cout;
+using std::cin;
+using std::endl;
 
 void BankApp::introScreen() 
 {
@@ -31,6 +36,53 @@ void BankApp::introScreen()
     ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝        Christian Martinez
 )" << '\n';
 }
+
+void mainFunction()
+    {
+        char selection {};
+
+        do
+        {
+            // Display menu
+            std::cout << "L - Log into account" << std::endl;
+            std::cout << "A - Open an account" << std::endl;
+            std::cout << "Q - Quit Program" << std::endl;
+            std::cout << "\nEnter your choice: ";
+
+            std::cin >> selection;
+
+            // use toupper function to make all letters capital
+            selection = toupper(selection);
+
+            // switch selection choices from menu
+            switch (selection)
+            {
+                case 'L':
+                {
+                    bank.logIn();
+                }
+                    break;
+
+                case 'A':
+                {
+                    bank.createAccount();
+                }
+                    break;
+
+                case 'Q':
+                {
+                    std::cout << "Goodbye" << std::endl;
+                }
+                    break;
+
+                default:
+                {
+                    std::cout << "Unknown selection, please try again" << std::endl;
+                }
+            }
+
+        }while(selection != 'q' && selection != 'Q');
+    }
 
 void BankApp::menuTwo() {
     char selection = ' ';
@@ -113,11 +165,17 @@ void BankApp::menuTwo() {
 
 
 void BankApp::createAccount() {
+    // have user create a username
+    string userName;
+    cout << "Enter a username between 4 and 10 alphanumeric characters: ";
+    getline(cin, userName);
 
+    // username validation using regex
+    std::regex usernamePattern("[a-zA-Z0-9]{4,10}");    // regex object and pattern to search
 
 }
 
 void BankApp::logIn() {
-
     
 }
+
