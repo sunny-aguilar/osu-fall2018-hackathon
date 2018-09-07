@@ -290,24 +290,19 @@ void BankApp::logIn() {                     // log in to account
 
     // check if filename exists
     if (inputFile) {
-//        do {
-            cout << "Validating user...";
-            string fileData;
-//            for (int pos{0}; pos < userData.size(); pos++)
-//                cin >> userData[pos];
-            while(inputFile >> fileData) {
-                userData.push_back(fileData);
-                cout << "\nreading data...";
-            }
+        cout << "Validating user...";
 
-            cout << "\n reading completed";
-//        } while (inputFile >> validPin);
+        // store file data in array
+        string fileData;
+        while(inputFile >> fileData) {
+            userData.push_back(fileData);
+        }
 
-        for (int pos{0}; pos < userData.size(); pos++)
-            cout << userData[pos] << " ";
+        cout << "\n reading completed";
 
+        // check pin # stored in file to user entered pin
         if (pin == userData[1])
-            cout << "Login successful";
+            cout << "\nLogin successful";
     }
     else
         cout << "This user account was not found";
