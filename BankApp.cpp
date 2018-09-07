@@ -209,6 +209,13 @@ void BankApp::createAccount() {
         cin >> initialDeposit;
     }
 
+    if(accountType == 'c') {
+
+    }
+    else if (accountType == 's') {
+        
+    }
+
 }
 
 void BankApp::logIn() {

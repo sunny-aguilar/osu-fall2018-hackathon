@@ -11,7 +11,7 @@ class Savings {
         double savingsBalance;
 
     public:
-
+        Savings(double deposit);    //1-arg constructor
 
 };
 

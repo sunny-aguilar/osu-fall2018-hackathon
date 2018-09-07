@@ -11,7 +11,7 @@ class Checkings {
         double checkingsBalance;
 
     public:
-
+        Checkings(double deposit);  //1-arg constructor
 
 };
 
