@@ -19,6 +19,7 @@ class BankApp {
         std::string username;
 
     public:
+        void introScreen();
 
 };
 
