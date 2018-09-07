@@ -292,15 +292,18 @@ void BankApp::logIn() {                     // log in to account
     if (inputFile) {
         do {
             cout << "Validating user...";
-
-            for (int pos{0}; pos < userData.size(); pos++)
-                cin >> userData[pos];
+            string fileInput;
+//            for (int pos{0}; pos < userData.size(); pos++)
+//                cin >> userData[pos];
+            while(cin >> fileInput)
+                userData.push_back(fileInput);
 
 
         } while (inputFile >> validPin);
 
         for (int pos{0}; pos < userData.size(); pos++)
             cout << userData[pos] << " ";
+
         if (pin == userData[1])
             cout << "Login successful";
     }
