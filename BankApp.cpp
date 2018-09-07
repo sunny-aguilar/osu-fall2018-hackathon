@@ -77,13 +77,13 @@ void BankApp::mainMenu()
             {
                 case 'L':
                 {
-                    //bank.logIn();
+                    //logIn();
                 }
                     break;
 
                 case 'A':
                 {
-                    //bank.createAccount();
+                    //createAccount();
                 }
                     break;
 
@@ -126,57 +126,59 @@ void BankApp::subMenu() {
         selection = toupper(selection);
 
         // switch selection choices from menu
-        switch (selection) {
-            case 'V': {
-
+        switch (selection) 
+        {
+            case 'V': 
+            {
+                //loadUserData();
             }
             break;
 
             case 'M':
             {
-
+                //makeDeposit();
             }
             break;
 
             case 'W':
             {
-
+                //withdrawFunds();
             }
             break;
 
             case 'T':
             {
-
+                //transferFunds();
             }
             break;
 
             case 'S':
             {
-
+                //viewTransactions();
             }
             break;
 
             case 'U':
             {
-
+                //updateAccount();
             }
             break;
 
             case 'C':
             {
-
+                //closeAccount();
             }
             break;
 
             case 'Q':
             {
-
+                //mainMenu();
             }
             break;
 
             default:
             {
-                         std::cout << "Unknown selection, please try again" << std::endl;
+                std::cout << "Unknown selection, please try again" << std::endl;
             }
         }
 
