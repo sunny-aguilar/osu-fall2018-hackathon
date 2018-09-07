@@ -16,6 +16,9 @@ using std::cout;
 using std::cin;
 using std::endl;
 
+/*********************************************************************
+** Description:     intro screen logo function
+*********************************************************************/
 void BankApp::introScreen() 
 {
     std::cout << R"(
@@ -42,6 +45,9 @@ void BankApp::introScreen()
 )" << '\n';
 }
 
+/*********************************************************************
+** Description:     main menu function
+*********************************************************************/
 void mainFunction()
     {
         char selection {};
@@ -89,6 +95,9 @@ void mainFunction()
         }while(selection != 'q' && selection != 'Q');
     }
 
+/*********************************************************************
+** Description:     sub-menu function
+*********************************************************************/
 void BankApp::menuTwo() {
     char selection = ' ';
 
@@ -167,8 +176,9 @@ void BankApp::menuTwo() {
     } while (selection != 'q' && selection != 'Q');
 }
 
-
-
+/*********************************************************************
+** Description:     create account function
+*********************************************************************/
 void BankApp::createAccount() {
     // have user create a username
     string userName;
@@ -239,6 +249,9 @@ void BankApp::createAccount() {
     outputFile.close();                 // close file
 }
 
+/*********************************************************************
+** Description:     generate account number function
+*********************************************************************/
 string BankApp::accountNumberGenerator() {
     unsigned seed = time(0);
     srand(seed);
@@ -251,6 +264,9 @@ string BankApp::accountNumberGenerator() {
     return accountNum;
 }
 
+/*********************************************************************
+** Description:     login function
+*********************************************************************/
 void BankApp::logIn() {                     // log in to account
     // set up variables
     string userName;
@@ -271,8 +287,10 @@ void BankApp::logIn() {                     // log in to account
     inputFile.open(userName + "-" + accountNumber + ".txt");
 
     // check if filename exists
-    if () {
-
+    if (inputFile) {
+        do {
+            cout << "Validating user...";
+        } while (inputFile >> validPin);
     }
     else {
 
