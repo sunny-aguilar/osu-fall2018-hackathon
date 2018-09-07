@@ -6,6 +6,13 @@
 #ifndef CHECKINGS_HPP
 #define CHECKINGS_HPP
 
+class Checkings {
+    private:
 
+
+    public:
+
+
+};
 
 #endif                              // end of preprocessor directive

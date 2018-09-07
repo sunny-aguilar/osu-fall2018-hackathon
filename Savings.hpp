@@ -6,6 +6,13 @@
 #ifndef SAVINGS_HPP
 #define SAVINGS_HPP
 
+class Savings {
+    private:
 
+
+    public:
+
+
+};
 
 #endif                              // end of preprocessor directive

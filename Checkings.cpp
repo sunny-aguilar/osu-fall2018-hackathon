@@ -3,4 +3,4 @@
 ** Date:            September 6, 2018
 ** Description:     Checkings class implementation file
 *********************************************************************/
-
+#include "Checkings.hpp"

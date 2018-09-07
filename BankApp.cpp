@@ -3,4 +3,4 @@
 ** Date:            September 6, 2018
 ** Description:     BankingApp class implementation file
 *********************************************************************/
-
+#include "BankApp.hpp"
