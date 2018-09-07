@@ -32,7 +32,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="366" />
+          <entry key="cpp" value="368" />
           <entry key="hpp" value="154" />
           <entry key="txt" value="1" />
         </counts>
@@ -40,7 +40,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="1" />
-          <entry key="ObjectiveC" value="520" />
+          <entry key="ObjectiveC" value="522" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -94,8 +94,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/BankApp.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="975">
-              <caret line="197" column="4" selection-start-line="197" selection-start-column="4" selection-end-line="197" selection-end-column="4" />
+            <state relative-caret-position="1802">
+              <caret line="200" column="5" selection-start-line="200" selection-start-column="5" selection-end-line="200" selection-end-column="5" />
               <folding>
                 <element signature="e#310#329#0" expanded="true" />
               </folding>
@@ -166,9 +166,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="3840" />
-    <option name="y" value="-102" />
+    <option name="y" value="-368" />
     <option name="width" value="1436" />
-    <option name="height" value="2018" />
+    <option name="height" value="2284" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -233,15 +233,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1536284259917</updated>
-      <workItem from="1536284264596" duration="9491000" />
+      <workItem from="1536284264596" duration="9840000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9491000" />
+    <option name="totallyTimeSpent" value="9840000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3840" y="-102" width="1436" height="2018" extended-state="0" />
+    <frame x="3840" y="-368" width="1436" height="2284" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -255,7 +255,7 @@
       <window_info anchor="bottom" id="CMake" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32961783" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32961783" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -330,8 +330,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BankApp.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="197" column="4" selection-start-line="197" selection-start-column="4" selection-end-line="197" selection-end-column="4" />
+        <state relative-caret-position="1802">
+          <caret line="200" column="5" selection-start-line="200" selection-start-column="5" selection-end-line="200" selection-end-column="5" />
           <folding>
             <element signature="e#310#329#0" expanded="true" />
           </folding>

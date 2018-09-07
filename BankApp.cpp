@@ -195,6 +195,10 @@ void BankApp::createAccount() {
     char accountType = ' ';
     cout << "Would you like to open a checking or savings account? Enter c or s: ";
     cin >> accountType;
+    while (accountType != 'c' && accountType != 's') {
+        cout << "Please enter c for checking or s for savings: ";
+        cin >> accountType;
+    }
 
 }
 
