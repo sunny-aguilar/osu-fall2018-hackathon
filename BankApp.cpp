@@ -233,6 +233,8 @@ void BankApp::createAccount() {
     outputFile << acctNumber << "\n" << pin;
     outputFile << "\nType: " << accountType;
 
+    cout << "Account was successfully created\n";
+
 }
 
 string BankApp::accountNumberGenerator() {
