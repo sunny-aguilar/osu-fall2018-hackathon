@@ -56,6 +56,8 @@ void BankApp::mainMenu()
 
         do
         {
+            // Display banner
+            cout << ":::::::: WELCOME TO OSU STATE BANK :::::::: " << endl;
             // Display menu
             std::cout << "L - Log into account" << std::endl;
             std::cout << "A - Open an account" << std::endl;
