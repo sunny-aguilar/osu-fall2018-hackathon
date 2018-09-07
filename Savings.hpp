@@ -1,8 +1,11 @@
-//
-// Created by Sandro on 9/6/2018.
-//
+/*********************************************************************
+** Author:          Sandro Aguilar, Kuljot Biring and Christian Martinez
+** Date:            September 6, 2018
+** Description:     Savings class specification file
+*********************************************************************/
+#ifndef SAVINGS_HPP
+#define SAVINGS_HPP
 
-#ifndef OSU_FALL2018_HACKATHON_SAVINGS_HPP
-#define OSU_FALL2018_HACKATHON_SAVINGS_HPP
 
-#endif //OSU_FALL2018_HACKATHON_SAVINGS_HPP
+
+#endif                              // end of preprocessor directive

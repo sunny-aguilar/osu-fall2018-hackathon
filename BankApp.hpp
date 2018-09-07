@@ -22,4 +22,4 @@ class BankApp {
 
 };
 
-#endif //OSU_FALL2018_HACKATHON_BANKAPP_HPP
+#endif                              // end of preprocessor directive
