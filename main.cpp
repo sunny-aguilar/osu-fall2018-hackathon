@@ -5,15 +5,7 @@
 *********************************************************************/
 #include <iostream>
 
-class BankApp {
-    private:
 
-
-    public:
-        std::string accountNumber;
-        std::string username;
-
-};
 
 int main() {
 
