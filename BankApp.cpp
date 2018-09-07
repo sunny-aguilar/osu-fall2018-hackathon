@@ -228,7 +228,8 @@ void BankApp::createAccount() {
     string acctNumber = accountNumberGenerator();
 
     // append username to account number and write to file
-
+    std::ofstream outputFile;
+    outputFile.open(userName + "-" + acctNumber + ".txt");
 
 }
 
