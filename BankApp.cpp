@@ -5,6 +5,7 @@
 *********************************************************************/
 #include "BankApp.hpp"
 #include "Checkings.hpp"
+#include "Savings.hpp"
 #include <iostream>
 #include <regex>                        // regular expression validation
 using std::string;
@@ -215,7 +216,7 @@ void BankApp::createAccount() {
 
     }
     else if (accountType == 's') {
-
+        Savings s(initialDeposit);
     }
 
 }
