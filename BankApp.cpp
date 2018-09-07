@@ -233,6 +233,11 @@ string BankApp::accountNumberGenerator() {
     srand(seed);
     string accountNum = "OSU-";
     string alphanum = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    for(int i = 0; i<13; i++) {
+        accountNum += alphanum[rand() % 36];
+    }
+    std::cout << accountNum << std::endl;   // show account on screen
+    return accountNum;
 }
 
 void BankApp::logIn() {
