@@ -1,0 +1,3 @@
+C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/cmake-build-debug/CMakeFiles/osu_fall2018_hackathon.dir
+C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Sandro/Documents/Programming/CPP/osu-hackathon-fall2018/osu-fall2018-hackathon/cmake-build-debug/CMakeFiles/rebuild_cache.dir
