@@ -11,6 +11,7 @@
 #include <regex>                        // regular expression validation
 #include <ctime>                        // time function
 #include <cstdlib>                      // srand() and rand() functions
+#include <vector>                       // vector library
 using std::string;
 using std::cout;
 using std::cin;
@@ -241,8 +242,8 @@ void BankApp::createAccount() {
     std::ofstream outputFile;
     outputFile.open(userName + "-" + acctNumber + ".txt");
     outputFile << acctNumber << "\n" << pin;
-    outputFile << "\nType: " << accountType;
-    outputFile << "\n" << accountType << "01-" << initialDeposit;
+//    outputFile << "\nType: " << accountType;
+//    outputFile << "\n" << accountType << "01-" << initialDeposit;
 
     cout << "Account was successfully created\n";
 
@@ -273,6 +274,7 @@ void BankApp::logIn() {                     // log in to account
     string accountNumber;
     int pin;
     int validPin {false};
+    std::vector<int> userData;
 
     // ask user for login info
     cout << "Enter your username: ";
@@ -290,11 +292,12 @@ void BankApp::logIn() {                     // log in to account
     if (inputFile) {
         do {
             cout << "Validating user...";
+            
+            if (pin == validPin)
+                cout << "Login successful";
         } while (inputFile >> validPin);
     }
-    else {
-
-    }
-
+    else
+        cout << "This user account was not found";
 }
 
