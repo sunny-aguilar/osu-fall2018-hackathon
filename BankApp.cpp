@@ -179,6 +179,11 @@ void BankApp::createAccount() {
         cin >> userName;
     }
 
+    // have user create a 4 digit password/pin
+    string pin;
+    cout << "Enter a 4 digit pin (0-9): ";
+    cin >> pin;
+
 }
 
 void BankApp::logIn() {
