@@ -22,11 +22,12 @@ class BankApp {
 
     public:
         void introScreen();
-        void menuTwo();
+        void mainMenu();
+        void subMenu();
         std::string accountNumberGenerator();
         void createAccount();
         void logIn();
-
+        void loadUserData();
 };
 
 #endif                              // end of preprocessor directive

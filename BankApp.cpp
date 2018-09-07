@@ -49,7 +49,7 @@ void BankApp::introScreen()
 /*********************************************************************
 ** Description:     main menu function
 *********************************************************************/
-void mainFunction()
+void BankApp::mainMenu()
     {
         char selection {};
 
@@ -99,7 +99,7 @@ void mainFunction()
 /*********************************************************************
 ** Description:     sub-menu function
 *********************************************************************/
-void BankApp::menuTwo() {
+void BankApp::subMenu() {
     char selection = ' ';
 
     do {
@@ -306,3 +306,6 @@ void BankApp::logIn() {                     // log in to account
         cout << "This user account was not found";
 }
 
+void BankApp::loadUserData() {
+    
+}
