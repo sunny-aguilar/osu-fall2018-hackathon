@@ -13,6 +13,8 @@ class BankApp {
         // hold checkings and savings accounts
         std::vector<Checkings> checkingAccounts;
         std::vector<Savings> savingsAccounts;
+
+        // variables to hold user account info
         std::string accountNumber;
         std::string username;
 
