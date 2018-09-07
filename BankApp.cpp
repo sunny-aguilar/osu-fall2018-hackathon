@@ -227,7 +227,8 @@ void BankApp::createAccount() {
 }
 
 string BankApp::accountNumberGenerator() {
-
+    unsigned seed = time(0);
+    srand(seed);
 }
 
 void BankApp::logIn() {
