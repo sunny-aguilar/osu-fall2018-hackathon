@@ -8,6 +8,8 @@
 #include "Savings.hpp"
 #include <iostream>
 #include <regex>                        // regular expression validation
+#include <ctime>                        // time function
+#include <cstdlib>                      // srand() and rand() functions
 using std::string;
 using std::cout;
 using std::cin;
