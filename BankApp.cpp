@@ -200,6 +200,9 @@ void BankApp::createAccount() {
         cin >> accountType;
     }
 
+    // ask user for a initial deposit amount
+    double initialDeposit {0};
+
 }
 
 void BankApp::logIn() {
