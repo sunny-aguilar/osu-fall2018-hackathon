@@ -250,7 +250,12 @@ string BankApp::accountNumberGenerator() {
     return accountNum;
 }
 
-void BankApp::logIn() {
-    
+void BankApp::logIn() {                     // log in to account
+    string userName;
+
+
+
+
+
 }
 
