@@ -226,6 +226,9 @@ void BankApp::createAccount() {
     // generate account number and save as a variable
     string acctNumber = accountNumberGenerator();
 
+    // append username to account number and write to file
+    
+
 }
 
 string BankApp::accountNumberGenerator() {
