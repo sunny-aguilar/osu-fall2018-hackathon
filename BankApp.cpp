@@ -16,6 +16,7 @@ using std::string;
 using std::cout;
 using std::cin;
 using std::endl;
+using std::vector;
 
 /*********************************************************************
 ** Description:     intro screen logo function
@@ -273,7 +274,7 @@ void BankApp::logIn() {                     // log in to account
     string userName;
     string accountNumber;
     string pin;
-    std::vector<string> userData;
+    vector<string> userData;
 
     // ask user for login info
     cout << "Enter your username: ";
@@ -296,6 +297,7 @@ void BankApp::logIn() {                     // log in to account
         while(inputFile >> fileData)
             userData.push_back(fileData);
 
+        // load user data into BankApp
         loadUserData(userData);
 
         // check pin # stored in file to user entered pin
@@ -309,6 +311,6 @@ void BankApp::logIn() {                     // log in to account
 /*********************************************************************
 ** Description:     loads user data into bank app
 *********************************************************************/
-void BankApp::loadUserData(std::vector<string> vect) {
-    
+void BankApp::loadUserData(const vector<string> &vect) {
+
 }

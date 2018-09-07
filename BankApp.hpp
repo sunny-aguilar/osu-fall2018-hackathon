@@ -9,6 +9,8 @@
 #include "Savings.hpp"
 #include <string>
 #include <vector>
+using std::string;
+using std::vector;
 
 class BankApp {
     private:
@@ -27,7 +29,7 @@ class BankApp {
         std::string accountNumberGenerator();
         void createAccount();
         void logIn();
-        void loadUserData(std::vector<std::string> vect);
+        void loadUserData(const vector<string> &vect);
 };
 
 #endif                              // end of preprocessor directive
