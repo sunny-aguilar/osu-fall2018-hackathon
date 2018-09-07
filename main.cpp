@@ -9,9 +9,9 @@
 #include <iostream>
 
 int main() {
-    BankApp b;
-    b.introScreen();
-
+    BankApp bank;                               // create bank object
+    bank.introScreen();                         // show intro screen
+    bank.createAccount();
 
     return 0;
 }
