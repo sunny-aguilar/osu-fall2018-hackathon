@@ -273,7 +273,6 @@ void BankApp::logIn() {                     // log in to account
     string userName;
     string accountNumber;
     string pin;
-    int validPin {false};
     std::vector<string> userData;
 
     // ask user for login info
@@ -294,9 +293,8 @@ void BankApp::logIn() {                     // log in to account
 
         // store file data in array
         string fileData;
-        while(inputFile >> fileData) {
+        while(inputFile >> fileData)
             userData.push_back(fileData);
-        }
 
         cout << "\n reading completed";
 
