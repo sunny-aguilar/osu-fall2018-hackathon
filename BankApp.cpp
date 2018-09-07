@@ -231,6 +231,8 @@ void BankApp::createAccount() {
 string BankApp::accountNumberGenerator() {
     unsigned seed = time(0);
     srand(seed);
+    string accountNum = "OSU-";
+    string alphanum = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 }
 
 void BankApp::logIn() {
