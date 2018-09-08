@@ -297,7 +297,7 @@ void BankApp::logIn() {                     // log in to account
 
     do {
         // show login banner
-        cout << ""''
+        cout << "\n:::::: ACCOUNT LOGIN ::::::::::::::::::\n\n";
 
         // ask user for login info
         cout << "Enter your username: ";
@@ -339,6 +339,8 @@ void BankApp::logIn() {                     // log in to account
             cout << "This user account was not found\n"
                  << "Would you like to try again?\n";
             cin >> go;
+            cin.ignore();
+
             if(toupper(go) != 'Y') {
                 cout << "Have a great day!\n\n\n";
 
