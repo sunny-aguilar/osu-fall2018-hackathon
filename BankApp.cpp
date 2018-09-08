@@ -321,15 +321,12 @@ void BankApp::logIn() {                     // log in to account
 
             // check pin # stored in file to user entered pin
             if (pin == userData[1]) {
-                cout << "\nLogin successful\n";
+                cout << "\nLogin successful\n\n";
             }
 
             // load user data into BankApp
             // pass vector w/user data into function to load it
             loadUserData(userData);
-
-            // check that data was loaded
-
         }
         else {
             cout << "This user account was not found\n"
