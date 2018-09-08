@@ -353,14 +353,24 @@ void BankApp::logIn() {                     // log in to account
 }
 
 /*********************************************************************
-** Description:     loads user data into bank app
+** Description:     loads user data into bank app from vector
+**                  userData coming from login function
 *********************************************************************/
 void BankApp::loadUserData(const vector<string> &vect) {
     // set account number in private variable
     setAccountNumber(vect[0]);
     // set username in private variable
     setUsername(vect[2]);
-    // set checkings and savings objects
+    // set checkings account object
+    // USE SETTER FUNCTIONS
+//    for (size_t pos{4}; pos < vect.size(); pos++) {
+//        // data extraction here
+//    }
+
+    checkingAccounts.push_back(vect[4]);
+
+    // set savings account object
+    savingsAccounts.push_back();
 }
 
 /*********************************************************************
@@ -383,6 +393,12 @@ void BankApp::setUsername(string username) {
 string BankApp::getAccountNumber() {
     return accountNumber;
 }
+
+/*********************************************************************
+** Description:     setter function for checkings account
+*********************************************************************/
+
+
 
 /*********************************************************************
 ** Description:     getter function for username
