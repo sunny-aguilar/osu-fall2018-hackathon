@@ -301,7 +301,11 @@ void BankApp::logIn() {                     // log in to account
 
     do {
         // show login banner
-        cout << "\n:::::: ACCOUNT LOGIN ::::::::::::::::::\n\n";
+        std::cout << R"(
+        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ 　        ▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬ ACCOUNT LOGIN ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬
+        ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+            )" << '\n';
 
         // ask user for login info
         cout << "Enter your username: ";
