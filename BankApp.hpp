@@ -32,8 +32,8 @@ class BankApp {
         void loadUserData(const vector<string> &vect);
         void setAccountNumber(string accountNumber);
         void setUsername(string username);
-        string setCheckings();
-        string setSavings();
+        void setCheckings();
+        void setSavings();
         string getAccountNumber();
         string getUsername();
 

@@ -363,8 +363,10 @@ void BankApp::logIn() {                     // log in to account
 void BankApp::loadUserData(const vector<string> &vect) {
     // set account number in private variable
     setAccountNumber(vect[0]);
+
     // set username in private variable
     setUsername(vect[2]);
+
     // set checkings account object
     // USE SETTER FUNCTIONS
 //    for (size_t pos{4}; pos < vect.size(); pos++) {
@@ -392,17 +394,18 @@ void BankApp::setUsername(string username) {
 }
 
 /*********************************************************************
+** Description:     setter function for checkings account
+*********************************************************************/
+void setCheckings(double ) {
+    // s
+}
+
+/*********************************************************************
 ** Description:     getter function for accountNumber
 *********************************************************************/
 string BankApp::getAccountNumber() {
     return accountNumber;
 }
-
-/*********************************************************************
-** Description:     setter function for checkings account
-*********************************************************************/
-
-
 
 /*********************************************************************
 ** Description:     getter function for username
