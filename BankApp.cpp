@@ -367,10 +367,10 @@ void BankApp::loadUserData(const vector<string> &vect) {
 //        // data extraction here
 //    }
 
-    checkingAccounts.push_back(vect[4]);
+//    checkingAccounts.push_back(vect[4]);
 
     // set savings account object
-    savingsAccounts.push_back();
+//    savingsAccounts.push_back();
 }
 
 /*********************************************************************
