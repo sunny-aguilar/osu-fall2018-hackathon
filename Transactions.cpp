@@ -8,7 +8,7 @@
 /*********************************************************************
 ** Description:     1-arg constructor
 *********************************************************************/
-Transaction::Withdrawl(double transactionAMT, double ){
+Transaction::Withdrawl(double transactionAMT, double) {
 	//pull account balance
 	//check if balance > than withdrawl amount
 		//offer overdraft charge option
