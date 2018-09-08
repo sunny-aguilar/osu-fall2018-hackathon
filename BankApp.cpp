@@ -322,6 +322,9 @@ void BankApp::logIn() {                     // log in to account
             // check pin # stored in file to user entered pin
             if (pin == userData[1]) {
                 cout << "\nLogin successful\n\n";
+
+                // take user to sub menu
+                subMenu();
             }
 
             // load user data into BankApp
@@ -336,7 +339,7 @@ void BankApp::logIn() {                     // log in to account
                 cout << "Have a great day!\n\n\n";
 
                 // take user to sub menu
-                subMenu();
+                mainMenu();
             }
         }
 
