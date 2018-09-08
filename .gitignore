@@ -1,5 +1,6 @@
 # Directories
 cmake-build-debug/
+idea/
 
 # Specific Files
 CMakeLists.txt
