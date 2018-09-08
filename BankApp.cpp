@@ -113,7 +113,7 @@ void BankApp::subMenu() {
 
     do {
         // Display banner
-        cout << "... ... ... ... ... ... ... ... ... ... ... ... ...\n"
+        cout << "\n... ... ... ... ... ... ... ... ... ... ... ... ...\n"
                 ":::::::::: SELECT A CHOICE FROM THE MENU ::::::::::\n"
                 "... ... ... ... ... ... ... ... ... ... ... ... ...\n";
 
@@ -296,13 +296,17 @@ void BankApp::logIn() {                     // log in to account
     vector<string> userData;
 
     do {
+        // show login banner
+        cout << ""''
+
         // ask user for login info
         cout << "Enter your username: ";
         cin >> user;
         cout << "Enter your account number: ";
         cin >> accountNumber;
+        cin.ignore();   // ignore \n character
         cout << "Enter your 4 digit pin: ";
-        cin >> pin;
+        getline(cin, pin);
 
         // create filename from user entered data
         std::ifstream inputFile;
