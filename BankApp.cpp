@@ -18,6 +18,9 @@ using std::cout;
 using std::cin;
 using std::endl;
 using std::vector;
+using std::flush;
+using std::this_thread::sleep_for;
+using std::chrono::milliseconds;
 
 /*********************************************************************
 ** Description:     intro screen logo function
