@@ -442,3 +442,21 @@ string BankApp::getAccountNumber() {
 string BankApp::getUsername() {
     return username;
 }
+
+/**********************************************************************************
+** Function prints each character in a string with a delay to create a typewriter
+** The first parameter request the string to be displayed and the second parameter
+** is the number of milliseconds each character takes to print
+**********************************************************************************/
+void typeWriting(const string  &message, unsigned int timePerChar)
+{
+    // range based for loop to loop through each character in the string
+    for (const char x: message)
+    {
+        // use flush to empty buffer after printing character
+        cout << x << flush;
+
+        // thread to sleep for specified milliseconds to create delay.
+        sleep_for(milliseconds(timePerChar));
+    }
+}
