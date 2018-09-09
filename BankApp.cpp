@@ -735,7 +735,7 @@ void BankApp::updateAccount() {
                     cin >> newPIN;
                 }
 
-
+                // write new pin to file
                 string strReplace = pin;
                 string strNew = newPIN;
                 std::ifstream inputFile(fileName);
@@ -752,13 +752,16 @@ void BankApp::updateAccount() {
                     temp << strTemp;
                 }
 
+                // update pin private variable
                 setPin(newPIN);
 
+                // close files
                 cout << "File to remove: " << fileName << endl;
                 temp.close();
                 inputFile.close();
                 remove(fileName.c_str());
 
+                // replace name of temp file
                 int result;
                 result = rename("temp.txt", fileName.c_str());
                 if (result == 0)
