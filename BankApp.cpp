@@ -15,6 +15,7 @@
 #include "BankApp.hpp"
 #include "Checkings.hpp"
 #include "Savings.hpp"
+#include "Transactions.hpp"
 #include <iostream>
 #include <string>
 #include <fstream>                      // filestream operations
@@ -200,8 +201,18 @@ void BankApp::subMenu() {
             break;
 
             case 'W':
-            {
-                //withdrawFunds();
+            {   
+                Transaction T1(filename);
+                double withdrawlAMT;
+                std::string ACTTYPE;
+
+                cout << "Enter C for Checkings, S for Savings" << endl;
+                cin << ACTTYPE;
+
+                cout << "Enter withdrawl amount" << endl;
+                cin >> withdrawlAMT;
+
+                T1.Withdrawl(withdrawlAMT);
             }
             break;
 
