@@ -469,7 +469,7 @@ void BankApp::loadUserData(const vector<string> &vect) {
     vector<string> onlySavings = extractAccounts(vect, 's');
 
     // parse vector and push into checkings object array
-    for (int i = 0; i < onlyChecking.size(); i++) {
+    for (int i = 0; i < onlySavings.size(); i++) {
         // convert savings balance string to double
         double savingsAmount = std::stoi(parseBalance(onlySavings[i]));
 
@@ -676,6 +676,23 @@ void BankApp::updateAccount() {
                     cin >> newUserName;
                 }
                 setUsername(newUserName);
+
+//                string line;
+//                string deleteLine = getUsername();
+//                std::ifstream inputFile;
+//                inputFile.open(fileName);
+//                std::ofstream temp;
+//                temp.open("temp.txt");
+//
+//                while (getline(inputFile, line)) {
+//                    line.replace(line.find(deleteLine), deleteLine.length(), newUserName);
+//                    temp << line << endl;
+//                }
+//
+//                temp.close();
+//                inputFile.close();
+//                remove(fileName.c_str());
+//                rename("temp.txt",fileName.c_str());
 
                 break;
             }
