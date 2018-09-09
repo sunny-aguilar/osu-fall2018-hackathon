@@ -219,7 +219,7 @@ void BankApp::subMenu() {
 
             case 'U':
             {
-                //updateAccount();
+                updateAccount();
             }
             break;
 
@@ -644,4 +644,66 @@ void BankApp::viewUserData() {
     cout << "           Account Number: " << getAccountNumber() << endl;
     cout << "           Your username: " << getUsername() << endl;
     cout << "           Your PIN #: " << getPin() << endl;
+}
+
+/*********************************************************************
+** Description:     update the user's account (username and pin)
+*********************************************************************/
+void BankApp::updateAccount() {
+    char go{'N'};
+    int selection{0};
+
+    cout << "Let's update your account." << endl;
+    do {
+        cout << "1. Change your username\n";
+        cout << "2. Change your pin number\n\n";
+        cout << "Enter Selction: ";
+        cin >> selection;
+        cin.ignore();
+
+        switch (selection) {
+            case 1: {
+                // have user create username
+                string newUserName;
+                cout << "Create a new username between 4 and 10 alphanumeric characters: ";
+                getline(cin, newUserName);
+                // username validation using regex
+                std::regex usernamePattern("[a-zA-Z0-9]{4,10}");
+                std::smatch m;
+
+                while (!std::regex_match(newUserName, m , usernamePattern)) {
+                    cout << "\nError! Create a username between 4 and 10 alphanumeric characters and no spacing: ";
+                    cin >> newUserName;
+                }
+                setUsername(newUserName);
+
+                break;
+            }
+            case 2: {
+                // have user create a new 4 digit pin
+                string newPIN;
+                cout << "Create a 4 digit pin (0-9): ";
+                cin >> newPIN;
+
+                // pin validation using regex
+                std::regex pinPattern("[0-9]{4}");
+                std::smatch n;
+                while (!std::regex_match(newPIN, n, pinPattern)) {
+                    cout << "Error! Create a pin 4 characters lond and no spacing: ";
+                    cin >> newPIN;
+                }
+                break;
+            }
+            default:
+                cout << "Please select 1 or 2, try again" << endl;
+        }
+
+        cout << "Would you like to update your info again? y/n " << endl;
+        cin.get(go);
+
+        // if user is done updating their info, go to submenu
+        if (toupper(go) != 'Y')
+            subMenu();
+
+    } while (toupper(go) == 'Y');
 }

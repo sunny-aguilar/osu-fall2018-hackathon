@@ -49,6 +49,7 @@ class BankApp {
         string parseBalance(string accountAmount);
         void closeAccount(string fileName);
         void viewUserData();
+        void updateAccount();
 };
 
 #endif                              // end of preprocessor directive
