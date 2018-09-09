@@ -21,6 +21,7 @@ class BankApp {
         // variables to hold user account info
         string accountNumber;
         string username;
+        string fileName;
 
     public:
         void introScreen();
