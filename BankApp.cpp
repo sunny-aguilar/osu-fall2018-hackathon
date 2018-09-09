@@ -694,18 +694,12 @@ void BankApp::updateAccount() {
                     strTemp += "\n";
                     temp << strTemp;
                 }
-
-//                setUsername(newUserName);
+                
 
                 // rename file with new username
-
                 string oldFileName = getFileName();
                 string newFileName = oldFileName.replace(oldFileName.begin(), oldFileName.begin() + getUsername().length(), newUserName);
-//                string oldFileName = getFileName();
-//                string newFileName = getUsername() + "-";
-//                for (size_t i{getUsername().length()}; i < getFileName().length(); i++) {
-//                    newFileName += oldFileName[i];
-//                }
+
                 setUsername(newUserName);
 
                 cout << "File to remove: " << fileName << endl;
