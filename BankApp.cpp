@@ -309,8 +309,14 @@ void BankApp::createAccount() {
 
     // append username to account number and write to file
     std::ofstream outputFile;
+
+    // set fileName
     setFileName(userName + "-" + acctNumber + ".txt");
+
+    // open file to write
     outputFile.open(getFileName());
+
+    // write to file
     outputFile << acctNumber << "\n" << pin << "\n" << userName;
     outputFile << "\nType:" << accountType;
     outputFile << "\n" << "*" << accountType << "01-" << initialDeposit;
@@ -584,6 +590,15 @@ string BankApp::parseBalance(string accountAmount) {
 ** Description:     delete customer account by deleting file
 *********************************************************************/
 void BankApp::closeAccount(string fileName) {
+    cout << "Filename: " << fileName << endl;
+    char confirm{'n'};
+    cout << "We are sad to see you go. "
+            "Are you sure you want to close your account? ";
+
+    cin >> confirm;
+    cin.ignore();
+
+
     if (remove(fileName.c_str()) != 0)
         cout << "Error closing account. Please contact customer service.";
     else
