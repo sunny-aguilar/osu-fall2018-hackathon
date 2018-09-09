@@ -564,3 +564,13 @@ string BankApp::parseBalance(string accountAmount) {
 
     return temp;
 }
+
+/*********************************************************************
+** Description:     delete customer account by deleting file
+*********************************************************************/
+void BankApp::deleteAccount(string fileName) {
+    if (remove(" ") != 0)
+        cout << "Error closing account. Please contact customer service.";
+    else
+        cout << "Account successfully closed";
+}
