@@ -36,6 +36,7 @@ class BankApp {
         void setSavings();
         string getAccountNumber();
         string getUsername();
+        void typeWriting(const string&, unsigned int timePerChar);
 
 };
 
