@@ -687,16 +687,12 @@ void BankApp::updateAccount() {
                 }
 
                 string strTemp;
-                bool found = false;
                 while (inputFile >> strTemp) {
-                    if (strTemp == strReplace) {
+                    if (strTemp == "sunny") {
                         strTemp = strNew;
-                        found = true;
                     }
                     strTemp += "\n";
                     temp << strTemp;
-                    if (found)
-                        break;
                 }
                 cout << "File to remove: " << fileName << endl;
                 temp.close();
