@@ -382,6 +382,8 @@ void BankApp::logIn() {                     // log in to account
 
         // create filename from user entered data
         std::ifstream inputFile;
+
+        // set fileName private variable
         inputFile.open(user + "-" + accountNumber + ".txt");
 
         // check if filename exists
@@ -402,6 +404,9 @@ void BankApp::logIn() {                     // log in to account
                 cout << BOLDGREEN; 
                 cout << "\nLogin successful\n\n";
                 cout << RESET << endl;
+
+                // set fileName private variable
+                setFileName(user + "-" + accountNumber + ".txt");
 
                 // take user to sub menu
                 subMenu();
@@ -601,6 +606,8 @@ void BankApp::closeAccount(string fileName) {
 
     if (remove(fileName.c_str()) != 0)
         cout << "Error closing account. Please contact customer service.";
-    else
+    else {
         cout << "Account successfully closed";
+        mainMenu();
+    }
 }
