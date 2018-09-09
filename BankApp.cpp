@@ -3,6 +3,15 @@
 ** Date:            September 6, 2018
 ** Description:     BankingApp class implementation file
 *********************************************************************/
+#define RESET   "\033[0m"                   // reset color
+#define RED     "\033[31m"                  // red 
+#define BOLDRED     "\033[1m\033[31m"      // bold red 
+#define BOLDGREEN   "\033[1m\033[32m"      // bold green 
+#define BOLDYELLOW  "\033[1m\033[33m"      // bold yellow 
+#define BOLDBLUE    "\033[1m\033[34m"      // bold blue 
+#define BOLDMAGENTA "\033[1m\033[35m"      // bold magenta 
+#define BOLDCYAN    "\033[1m\033[36m"      // bold cyan 
+
 #include "BankApp.hpp"
 #include "Checkings.hpp"
 #include "Savings.hpp"
@@ -29,6 +38,7 @@ using std::chrono::milliseconds;
 *********************************************************************/
 void BankApp::introScreen() 
 {
+    cout << RED;
     string message = R"(
     PLEASE WAIT....LOADING BANKING SOFTWARE.....
 
@@ -39,23 +49,23 @@ void BankApp::introScreen()
     ╚██████╔╝██║  ██║███████╗╚██████╔╝╚██████╔╝██║ ╚████║
     ╚═════╝ ╚═╝  ╚═╝╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝
 
-    ███████╗████████╗ █████╗ ████████╗███████╗
-    ██╔════╝╚══██╔══╝██╔══██╗╚══██╔══╝██╔════╝
-    ███████╗   ██║   ███████║   ██║   █████╗
-    ╚════██║   ██║   ██╔══██║   ██║   ██╔══╝
-    ███████║   ██║   ██║  ██║   ██║   ███████╗
-    ╚══════╝   ╚═╝   ╚═╝  ╚═╝   ╚═╝   ╚══════╝
+    ███████╗████████╗ █████╗ ████████╗███████╗        (\.---./)
+    ██╔════╝╚══██╔══╝██╔══██╗╚══██╔══╝██╔════╝         /.-.-.\
+    ███████╗   ██║   ███████║   ██║   █████╗          /| 0_0 |\
+    ╚════██║   ██║   ██╔══██║   ██║   ██╔══╝         |_`-(v)-'_|
+    ███████║   ██║   ██║  ██║   ██║   ███████╗       \`-._._.-'/
+    ╚══════╝   ╚═╝   ╚═╝  ╚═╝   ╚═╝   ╚══════╝ -~-(((.`-\_|_/-'.)))-~' <_
 
-    ██████╗  █████╗ ███╗   ██╗██╗  ██╗        Version 1.0
-    ██╔══██╗██╔══██╗████╗  ██║██║ ██╔╝        Created by:
+    ██████╗  █████╗ ███╗   ██╗██╗  ██╗              Version 1.0
+    ██╔══██╗██╔══██╗████╗  ██║██║ ██╔╝              Created by:
     ██████╔╝███████║██╔██╗ ██║█████╔╝
-    ██╔══██╗██╔══██║██║╚██╗██║██╔═██╗         Sandro Aguilar
-    ██████╔╝██║  ██║██║ ╚████║██║  ██╗        Kuljot Biring
-    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝        Christian Martinez
+    ██╔══██╗██╔══██║██║╚██╗██║██╔═██╗               Sandro Aguilar
+    ██████╔╝██║  ██║██║ ╚████║██║  ██╗              Kuljot Biring
+    ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝              Christian Martinez
     )";
 
-    typeWriting(message, 3); // function call to typeWriting 3 ms per char
-    cout << endl;
+    typeWriting(message, 3);
+    cout << RESET <<  endl;
 }
 
 /*********************************************************************
@@ -68,17 +78,19 @@ void BankApp::mainMenu()
         do
         {
             // Display banner and menu with raw strings
-            std::cout << R"(
-        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
- 　        ▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬ MENU OPTIONS ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬  
-    
+            cout << BOLDYELLOW;
+    std::cout << R"(
+
+ 　        ▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬ MENU OPTIONS ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬
+
                                     L - Log into account
                                     A - Open an account
                                     Q - Quit Program
                                     Enter your choice: ☜
-             
-        ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+
             )" << '\n';
+    cout << RESET << endl;
 
            
             // ask user for selection input
@@ -105,8 +117,9 @@ void BankApp::mainMenu()
 
                 case 'Q':
                 {
-                    std::cout << "Goodbye" << std::endl;
-                    std::cout << R"(
+                    cout << BOLDGREEN;
+                    cout << "Goodbye" << endl;
+                    cout << R"(
                         _._._                        _._._
                        _|   |_                      _|   |_
                         | ... |_._._._._._._._._._._| ... |
@@ -120,15 +133,18 @@ void BankApp::mainMenu()
                     ||  |_____|_|_|_|__|_|_|__|_|_|_|_____|  ||
                 ~ ~^^ @@@@@@@@@@@@@@/=======\@@@@@@@@@@@@@@ ^^~ ~
                     ^~^~                                ~^~^
-                    )" << '\n';                                            
-                    
-                    std::cout << "Please come again!" << std::endl;
+                    )" << '\n';
+
+                    cout << "Please come again!" << endl;
+                    cout << RESET;
                 }
                     break;
 
                 default:
                 {
-                    std::cout << "Unknown selection, please try again" << std::endl;
+                    cout << BOLDRED;
+                    cout << "Unknown selection, please try again!!" << endl;
+                    cout << RESET;
                 }
             }
 
@@ -143,10 +159,11 @@ void BankApp::subMenu() {
 
     do {
         // Display banner
-        std::cout << R"(
-        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+        cout << BOLDMAGENTA;
+        cout << R"(
+
  　        ▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬ MENU OPTIONS ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬
-   
+
                                     V - View your Account
                                     M - Make A Deposit
                                     W - Withdraw
@@ -156,13 +173,12 @@ void BankApp::subMenu() {
                                     C - Close Account
                                     Q - Exit Menu
                                     Enter your choice: ☜
-        
-        ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+
             )" << '\n';
+        cout << RESET << endl;
 
-       
-
-        std::cin >> selection;
+        cin >> selection;
 
         // use toupper function to make all letters capital
         selection = toupper(selection);
@@ -220,7 +236,9 @@ void BankApp::subMenu() {
 
             default:
             {
-                std::cout << "Unknown selection, please try again" << std::endl;
+                cout << BOLDRED;
+                cout << "Unknown selection, please try again!!" << endl;
+                cout << RESET;
             }
         }
 
@@ -331,19 +349,27 @@ void BankApp::logIn() {                     // log in to account
 
     do {
         // show login banner
-        std::cout << R"(
-        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+        cout << BOLDCYAN;
+        cout << R"(
+
  　        ▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬ ACCOUNT LOGIN ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬
-        ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
             )" << '\n';
+        cout << RESET;
 
         // ask user for login info
+        cout << RED;
         cout << "Enter your username: ";
+        cout << RESET << endl;
         cin >> user;
+        cout << BOLDBLUE;
         cout << "Enter your account number: ";
+        cout << RESET << endl;
         cin >> accountNumber;
         cin.ignore();   // ignore \n character
+        cout << BOLDYELLOW;
         cout << "Enter your 4 digit pin: ";
+        cout << RESET << endl;
         getline(cin, pin);
 
         // create filename from user entered data
@@ -352,7 +378,9 @@ void BankApp::logIn() {                     // log in to account
 
         // check if filename exists
         if (inputFile) {
+            cout << BOLDMAGENTA;
             cout << "Validating user...";
+            cout << RESET << endl;
 
             // store user file data in array
             // user data stored in vector
@@ -363,7 +391,9 @@ void BankApp::logIn() {                     // log in to account
 
             // check pin # stored in file to user entered pin
             if (pin == userData[1]) {
+                cout << BOLDGREEN; 
                 cout << "\nLogin successful\n\n";
+                cout << RESET << endl;
 
                 // take user to sub menu
                 subMenu();
@@ -374,13 +404,17 @@ void BankApp::logIn() {                     // log in to account
             loadUserData(userData);
         }
         else {
+            cout << BOLDRED;
             cout << "This user account was not found\n"
                  << "Would you like to try again?\n";
+            cout << RESET;
             cin >> go;
             cin.ignore();
 
             if(toupper(go) != 'Y') {
+                cout << BOLDGREEN;
                 cout << "Have a great day!\n\n\n";
+                cout << RESET;
 
                 // take user to sub menu
                 mainMenu();
