@@ -178,7 +178,8 @@ void BankApp::subMenu() {
             )" << '\n';
         cout << RESET << endl;
 
-        cin >> selection;
+        cin.get(selection);
+        cin.ignore();
 
         // use toupper function to make all letters capital
         selection = toupper(selection);
