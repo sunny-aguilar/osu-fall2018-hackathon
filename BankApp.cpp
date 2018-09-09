@@ -189,7 +189,7 @@ void BankApp::subMenu() {
         {
             case 'V': 
             {
-                //loadUserData();
+                viewUserData();
             }
             break;
 
@@ -408,13 +408,13 @@ void BankApp::logIn() {                     // log in to account
                 // set fileName private variable
                 setFileName(user + "-" + accountNumber + ".txt");
 
+                // load user data into BankApp
+                // pass vector w/user data into function to load it
+                loadUserData(userData);
+
                 // take user to sub menu
                 subMenu();
             }
-
-            // load user data into BankApp
-            // pass vector w/user data into function to load it
-            loadUserData(userData);
         }
         else {
             cout << BOLDRED;
@@ -610,4 +610,12 @@ void BankApp::closeAccount(string fileName) {
         cout << "Account successfully closed";
         mainMenu();
     }
+}
+
+/*********************************************************************
+** Description:     delete customer account by deleting file
+*********************************************************************/
+void BankApp::viewUserData() {
+    cout << "Account Number: " << getAccountNumber() << endl;
+    cout << "Your username: " << getUsername() << endl;
 }

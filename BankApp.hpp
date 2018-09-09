@@ -45,6 +45,7 @@ class BankApp {
         vector<string> extractAccounts(vector<string> vect, char type);
         string parseBalance(string accountAmount);
         void closeAccount(string fileName);
+        void viewUserData();
 };
 
 #endif                              // end of preprocessor directive
