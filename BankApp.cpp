@@ -13,6 +13,8 @@
 #include <ctime>                        // time function
 #include <cstdlib>                      // srand() and rand() functions
 #include <vector>                       // vector library
+#include <thread>
+#include <chrono>
 using std::string;
 using std::cout;
 using std::cin;
