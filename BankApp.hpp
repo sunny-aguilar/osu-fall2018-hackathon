@@ -39,7 +39,8 @@ class BankApp {
         double getCheckings();
         double getSavings();
         void typeWriting(const string&, unsigned int timePerChar);
-
+        vector<string> extractAccounts(vector<string> vect, char type);
+        string parseBalance(string accountAmount);
 };
 
 #endif                              // end of preprocessor directive

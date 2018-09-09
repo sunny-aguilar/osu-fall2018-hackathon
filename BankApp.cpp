@@ -312,7 +312,7 @@ void BankApp::createAccount() {
     outputFile.open(userName + "-" + acctNumber + ".txt");
     outputFile << acctNumber << "\n" << pin << "\n" << userName;
     outputFile << "\nType:" << accountType;
-    outputFile << "\n" << accountType << "01-" << initialDeposit;
+    outputFile << "\n" << "*" << accountType << "01-" << initialDeposit;
 
     cout << "Account was successfully created\n\n\n";
 
@@ -436,19 +436,32 @@ void BankApp::loadUserData(const vector<string> &vect) {
     // set username in private variable
     setUsername(vect[2]);
 
-    // convert checkings balance string to double
-    double checkingsAmount = std::stoi(vect[4]);
+    // determine how many checkings accounts in file
+    vector<string> onlyChecking = extractAccounts(vect, 'c');
 
-    // set checkings account object
-    Checkings loadCheckings(checkingsAmount);   // create checkings object
-    setCheckings(loadCheckings);                // push object into vector
+    // parse vector and push into checkings object array
+    for (int i = 0; i < onlyChecking.size(); i++) {
+        // convert checkings balance string to double
+        double checkingsAmount = std::stoi(parseBalance(onlyChecking[i]));
 
-    // convert savings balance string to double
-    double savingsAmount = std::stoi(vect[4]);
+        // set checkings account object
+        Checkings checkingAccount(checkingsAmount);   // create object
+        setCheckings(checkingAccount);                // push object into vector
+    }
 
-    // set savings account object
-    Savings loadSavings(savingsAmount);         // create savings object
-    setSavings(loadSavings);                    // push object into vector
+
+    // determine how many savings accounts in file
+    vector<string> onlySavings = extractAccounts(vect, 's');
+
+    // parse vector and push into checkings object array
+    for (int i = 0; i < onlyChecking.size(); i++) {
+        // convert savings balance string to double
+        double savingsAmount = std::stoi(parseBalance(onlySavings[i]));
+
+        // set savings account object
+        Savings savingsAccount(savingsAmount);         // create savings object
+        setSavings(savingsAccount);                    // push object into vector
+    }
 }
 
 /*********************************************************************
@@ -525,4 +538,29 @@ void BankApp::typeWriting(const string  &message, unsigned int timePerChar)
         // thread to sleep for specified milliseconds to create delay.
         sleep_for(milliseconds(timePerChar));
     }
+}
+
+/*********************************************************************
+** Description:   get total types of accounts c/s
+*********************************************************************/
+vector<string> BankApp::extractAccounts(vector<string> vect, char type) {
+    vector<string> accountsExtracted;
+
+    for (int i = 0; i < vect.size(); i++) {
+        if (vect[i][0] == '*' && vect[i][1] == type)
+            accountsExtracted.push_back(vect[i]);
+    }
+    
+    return accountsExtracted;
+}
+
+/*********************************************************************
+** Description:     parse balance amounts form file by removing the
+**                  first four characters x##-
+*********************************************************************/
+string BankApp::parseBalance(string accountAmount) {
+    auto temp = accountAmount;
+    temp.erase(0,4);
+
+    return temp;
 }
