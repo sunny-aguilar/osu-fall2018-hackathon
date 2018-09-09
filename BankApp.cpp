@@ -688,7 +688,6 @@ void BankApp::updateAccount() {
 
                 string strTemp;
                 while (inputFile >> strTemp) {
-                    cout << "Name to replace: " << strReplace << endl;
                     if (strTemp == strReplace) {
                         strTemp = strNew;
                     }
