@@ -486,21 +486,21 @@ void BankApp::setFileName(string file) {
 }
 
 /*********************************************************************
-** Description:     setter function for checkings account
+** Description:     setter function for checkings account variable
 *********************************************************************/
 void BankApp::setCheckings(Checkings setAmount ) {
     checkingAccounts.push_back(setAmount);
 }
 
 /*********************************************************************
-** Description:     setter function for savings account
+** Description:     setter function for savings account variable
 *********************************************************************/
 void BankApp::setSavings(Savings setAmount ) {
     savingsAccounts.push_back(setAmount);
 }
 
 /*********************************************************************
-** Description:     getter function for accountNumber
+** Description:     getter function for accountNumber variable
 *********************************************************************/
 string BankApp::getAccountNumber() {
     return accountNumber;
@@ -511,6 +511,13 @@ string BankApp::getAccountNumber() {
 *********************************************************************/
 string BankApp::getUsername() {
     return username;
+}
+
+/*********************************************************************
+** Description:     getter function for filename variable
+*********************************************************************/
+string BankApp::getFileName() {
+    return fileName;
 }
 
 /*********************************************************************
