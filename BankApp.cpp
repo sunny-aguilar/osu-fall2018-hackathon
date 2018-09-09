@@ -448,6 +448,9 @@ void BankApp::loadUserData(const vector<string> &vect) {
     // set username in private variable
     setUsername(vect[2]);
 
+    // set pin in private variable
+    setPin(vect[1]);
+
     // determine how many checkings accounts in file
     vector<string> onlyChecking = extractAccounts(vect, 'c');
 
@@ -491,6 +494,13 @@ void BankApp::setUsername(string username) {
 }
 
 /*********************************************************************
+** Description:     setter function for pin variable
+*********************************************************************/
+void BankApp::setPin(string pin) {
+    this->pin = pin;
+}
+
+/*********************************************************************
 ** Description:     setter function for filename variable
 *********************************************************************/
 void BankApp::setFileName(string file) {
@@ -523,6 +533,13 @@ string BankApp::getAccountNumber() {
 *********************************************************************/
 string BankApp::getUsername() {
     return username;
+}
+
+/*********************************************************************
+** Description:     getter function for pin variable
+*********************************************************************/
+string BankApp::getPin() {
+    return pin;
 }
 
 /*********************************************************************
@@ -616,6 +633,15 @@ void BankApp::closeAccount(string fileName) {
 ** Description:     delete customer account by deleting file
 *********************************************************************/
 void BankApp::viewUserData() {
-    cout << "Account Number: " << getAccountNumber() << endl;
-    cout << "Your username: " << getUsername() << endl;
+    // Display banner and menu with raw strings
+    cout << BOLDYELLOW;
+    std::cout << R"(
+
+ 　        ▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬ USER INFO ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬
+            )" << '\n';
+    cout << RESET << endl;
+
+    cout << "           Account Number: " << getAccountNumber() << endl;
+    cout << "           Your username: " << getUsername() << endl;
+    cout << "           Your PIN #: " << getPin() << endl;
 }

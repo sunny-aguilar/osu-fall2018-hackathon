@@ -21,6 +21,7 @@ class BankApp {
         // variables to hold user account info
         string accountNumber;
         string username;
+        string pin;
         string fileName;
 
     public:
@@ -33,11 +34,13 @@ class BankApp {
         void loadUserData(const vector<string> &vect);
         void setAccountNumber(string accountNumber);
         void setUsername(string username);
+        void setPin(string pin);
         void setFileName(string file);
         void setCheckings(Checkings setAmount);
         void setSavings(Savings setAmount);
         string getAccountNumber();
         string getUsername();
+        string getPin();
         string getFileName();
         double getCheckings();
         double getSavings();
