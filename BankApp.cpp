@@ -57,19 +57,20 @@ void BankApp::mainMenu()
 
         do
         {
-            // Display banner
+            // Display banner and menu with raw strings
             std::cout << R"(
         ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
- 　        ▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬ MENU OPTIONS ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬
+ 　        ▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬ MENU OPTIONS ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬  
+    
+                                    L - Log into account
+                                    A - Open an account
+                                    Q - Quit Program
+                                    Enter your choice: ☜
+             
         ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             )" << '\n';
 
-            // Display menu
-            std::cout << "L - Log into account" << std::endl;
-            std::cout << "A - Open an account" << std::endl;
-            std::cout << "Q - Quit Program" << std::endl;
-            std::cout << "\nEnter your choice: ";
-
+           
             // ask user for selection input
             cin.get(selection);
             cin.ignore();
@@ -95,6 +96,23 @@ void BankApp::mainMenu()
                 case 'Q':
                 {
                     std::cout << "Goodbye" << std::endl;
+                    std::cout << R"(
+                        _._._                        _._._
+                       _|   |_                      _|   |_
+                        | ... |_._._._._._._._._._._| ... |
+                        | ||| |  o  OSU  BANK    o  | ||| |
+                        | """ |  """    """    """  | """ |
+                   ())  |[-|-]| [-|-]  [-|-]  [-|-] |[-|-]|  ())
+                  (())) |     |---------------------|     | (()))
+                 (())())| """ |  """    """    """  | """ |(())())
+                 (()))()|[-|-]|  :::   .-"-.   :::  |[-|-]|(()))()
+                 ()))(()|     | |~|~|  |_|_|  |~|~| |     |()))(()
+                    ||  |_____|_|_|_|__|_|_|__|_|_|_|_____|  ||
+                ~ ~^^ @@@@@@@@@@@@@@/=======\@@@@@@@@@@@@@@ ^^~ ~
+                    ^~^~                                ~^~^
+                    )" << '\n';                                            
+                    
+                    std::cout << "Please come again!" << std::endl;
                 }
                     break;
 
@@ -118,19 +136,21 @@ void BankApp::subMenu() {
         std::cout << R"(
         ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
  　        ▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬ MENU OPTIONS ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬
+   
+                                    V - View your Account
+                                    M - Make A Deposit
+                                    W - Withdraw
+                                    T - Transfer Funds
+                                    S - View Transactions
+                                    U - Update Account Details
+                                    C - Close Account
+                                    Q - Exit Menu
+                                    Enter your choice: ☜
+        
         ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             )" << '\n';
 
-        // Display menu
-        std::cout << "V - View your Account" << std::endl;
-        std::cout << "M - Make A Deposit" << std::endl;
-        std::cout << "W - Withdraw" << std::endl;
-        std::cout << "T - Transfer Funds" << std::endl;
-        std::cout << "S - View Transactions" << std::endl;
-        std::cout << "U - Update Account Details" << std::endl;
-        std::cout << "C - Close Account" << std::endl;
-        std::cout << "Q - Exit Menu" << std::endl;
-        std::cout << "\nEnter your choice: ";
+       
 
         std::cin >> selection;
 
