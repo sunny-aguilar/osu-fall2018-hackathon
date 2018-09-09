@@ -405,15 +405,15 @@ void BankApp::loadUserData(const vector<string> &vect) {
     double checkingsAmount = std::stoi(vect[4]);
 
     // set checkings account object
-    Checkings loadCheckings(checkingsAmount);
-    setCheckings(loadCheckings);
+    Checkings loadCheckings(checkingsAmount);   // create checkings object
+    setCheckings(loadCheckings);                // push object into vector
 
     // convert savings balance string to double
     double savingsAmount = std::stoi(vect[4]);
 
     // set savings account object
-    Savings loadSavings(savingsAmount);
-    setSavings(loadSavings);
+    Savings loadSavings(savingsAmount);         // create savings object
+    setSavings(loadSavings);                    // push object into vector
 }
 
 /*********************************************************************
