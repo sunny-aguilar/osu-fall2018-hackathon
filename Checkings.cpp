@@ -12,4 +12,16 @@ Checkings::Checkings(double deposit)
         : checkingsBalance{deposit} {
 }
 
+/*********************************************************************
+** Description:     setter function for checkings balance
+*********************************************************************/
+void Checkings::loadBalance(double amount) {
+    checkingsBalance = amount;
+}
 
+/*********************************************************************
+** Description:     getter function for checkings balance
+*********************************************************************/
+double Checkings::getCheckingsBalance() {
+    return checkingsBalance;
+}

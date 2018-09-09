@@ -401,16 +401,19 @@ void BankApp::loadUserData(const vector<string> &vect) {
     // set username in private variable
     setUsername(vect[2]);
 
-    // set checkings account object
-    // USE SETTER FUNCTIONS
-//    for (size_t pos{4}; pos < vect.size(); pos++) {
-//        // data extraction here
-//    }
+    // convert checkings balance string to double
+    double checkingsAmount = std::stoi(vect[4]);
 
-//    checkingAccounts.push_back(vect[4]);
+    // set checkings account object
+    Checkings loadCheckings(checkingsAmount);
+    setCheckings(loadCheckings);
+
+    // convert savings balance string to double
+    double savingsAmount = std::stoi(vect[4]);
 
     // set savings account object
-//    savingsAccounts.push_back();
+    Savings loadSavings(savingsAmount);
+    setSavings(loadSavings);
 }
 
 /*********************************************************************
@@ -430,8 +433,15 @@ void BankApp::setUsername(string username) {
 /*********************************************************************
 ** Description:     setter function for checkings account
 *********************************************************************/
-void setCheckings(double ) {
-    // s
+void BankApp::setCheckings(Checkings setAmount ) {
+    checkingAccounts.push_back(setAmount);
+}
+
+/*********************************************************************
+** Description:     setter function for savings account
+*********************************************************************/
+void BankApp::setSavings(Savings setAmount ) {
+    savingsAccounts.push_back(setAmount);
 }
 
 /*********************************************************************
@@ -446,6 +456,22 @@ string BankApp::getAccountNumber() {
 *********************************************************************/
 string BankApp::getUsername() {
     return username;
+}
+
+/*********************************************************************
+** Description:     getter function for checkings account vector
+**                  elements
+*********************************************************************/
+double BankApp::getCheckings() {
+    return checkingAccounts[4].getCheckingsBalance();
+}
+
+/*********************************************************************
+** Description:     getter function for savings account vector
+**                  elements
+*********************************************************************/
+double BankApp::getSavings() {
+    return savingsAccounts[4].getSavingsBalance();
 }
 
 /**********************************************************************************

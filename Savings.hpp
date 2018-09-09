@@ -12,7 +12,8 @@ class Savings {
 
     public:
         Savings(double deposit);    //1-arg constructor
-        // add additional member functions here
+        void loadBalance(double amount);
+        double getSavingsBalance();
 };
 
 #endif                              // end of preprocessor directive

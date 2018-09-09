@@ -12,4 +12,16 @@ Savings::Savings(double deposit)
         : savingsBalance{deposit} {
 }
 
+/*********************************************************************
+** Description:     setter function for savings balance
+*********************************************************************/
+void Savings::loadBalance(double amount) {
+    savingsBalance = amount;
+}
 
+/*********************************************************************
+** Description:     getter function for savings balance
+*********************************************************************/
+double Savings::getSavingsBalance() {
+    return savingsBalance;
+}

@@ -12,8 +12,8 @@ class Checkings {
 
     public:
         Checkings(double deposit);  //1-arg constructor
-        // add additional member functions here
-
+        void loadBalance(double amount);
+        double getCheckingsBalance();
 };
 
 #endif                              // end of preprocessor directive
