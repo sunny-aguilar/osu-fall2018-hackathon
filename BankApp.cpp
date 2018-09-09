@@ -676,9 +676,9 @@ void BankApp::updateAccount() {
                     cout << "\nError! Create a username between 4 and 10 alphanumeric characters and no spacing: ";
                     cin >> newUserName;
                 }
-                setUsername(newUserName);
 
-                string strReplace = username;
+
+                string strReplace = getUsername();
                 string strNew = newUserName;
                 std::ifstream inputFile(fileName);
                 std::ofstream temp("temp.txt");
@@ -688,12 +688,16 @@ void BankApp::updateAccount() {
 
                 string strTemp;
                 while (inputFile >> strTemp) {
-                    if (strTemp == "sunny") {
+                    cout << "Name to replace: " << strReplace << endl;
+                    if (strTemp == strReplace) {
                         strTemp = strNew;
                     }
                     strTemp += "\n";
                     temp << strTemp;
                 }
+
+                setUsername(newUserName);
+
                 cout << "File to remove: " << fileName << endl;
                 temp.close();
                 inputFile.close();
@@ -721,6 +725,39 @@ void BankApp::updateAccount() {
                     cout << "Error! Create a pin 4 characters lond and no spacing: ";
                     cin >> newPIN;
                 }
+
+
+                string strReplace = pin;
+                string strNew = newPIN;
+                std::ifstream inputFile(fileName);
+                std::ofstream temp("temp.txt");
+                if (!inputFile || !temp)
+                    cout << "Error opening files!" << endl;
+
+                string strTemp;
+                while (inputFile >> strTemp) {
+                    if (strTemp == strReplace)
+                        strTemp = strNew;
+
+                    strTemp += "\n";
+                    temp << strTemp;
+                }
+
+                setPin(newPIN);
+
+                cout << "File to remove: " << fileName << endl;
+                temp.close();
+                inputFile.close();
+                remove(fileName.c_str());
+
+                int result;
+                result = rename("temp.txt", fileName.c_str());
+                if (result == 0)
+                    puts ("File successfully renamed");
+                else
+                    perror ("Error renaming file");
+
+
                 break;
             }
             default:
