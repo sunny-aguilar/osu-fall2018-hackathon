@@ -33,10 +33,12 @@ class BankApp {
         void loadUserData(const vector<string> &vect);
         void setAccountNumber(string accountNumber);
         void setUsername(string username);
+        void setFileName(string file);
         void setCheckings(Checkings setAmount);
         void setSavings(Savings setAmount);
         string getAccountNumber();
         string getUsername();
+        string getFileName();
         double getCheckings();
         double getSavings();
         void typeWriting(const string&, unsigned int timePerChar);

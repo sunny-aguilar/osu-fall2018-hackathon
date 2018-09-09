@@ -472,10 +472,17 @@ void BankApp::setAccountNumber(string accountNumber) {
 }
 
 /*********************************************************************
-** Description:     setter function for username
+** Description:     setter function for username variable
 *********************************************************************/
 void BankApp::setUsername(string username) {
     this->username = username;
+}
+
+/*********************************************************************
+** Description:     setter function for filename variable
+*********************************************************************/
+void BankApp::setFileName(string file) {
+    this->fileName = file;
 }
 
 /*********************************************************************
