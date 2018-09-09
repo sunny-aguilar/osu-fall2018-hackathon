@@ -3,6 +3,8 @@
 ** Date:            September 6, 2018
 ** Description:     View Account class implementation file
 *********************************************************************/
+#include <iostream>
+#include <string>
 #include "ViewAccount.hpp"
 
 /*********************************************************************
@@ -16,4 +18,4 @@ viewAccount::viewAccount(){
 		//balances
 	//Option to view transaction history
 	//Sub-Menu?
-}
+};

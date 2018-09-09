@@ -6,6 +6,8 @@
 #ifndef VIEWACCOUNT_HPP
 #define VIEWACCOUNT_HPP
 
+#include <iostream>
+#include <string>
 #include "BankApp.hpp"
 
 class viewAccount {
