@@ -550,7 +550,7 @@ vector<string> BankApp::extractAccounts(vector<string> vect, char type) {
         if (vect[i][0] == '*' && vect[i][1] == type)
             accountsExtracted.push_back(vect[i]);
     }
-    
+
     return accountsExtracted;
 }
 
