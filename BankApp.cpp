@@ -453,9 +453,9 @@ string BankApp::getUsername() {
 ** The first parameter request the string to be displayed and the second parameter
 ** is the number of milliseconds each character takes to print
 **********************************************************************************/
-void typeWriting(const string  &message, unsigned int timePerChar)
+void BankApp::typeWriting(const string  &message, unsigned int timePerChar)
 {
-    // range based for loop to loop through each character in the string
+    // range based for loop for each character in the string
     for (const char x: message)
     {
         // use flush to empty buffer after printing character
