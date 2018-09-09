@@ -225,7 +225,7 @@ void BankApp::subMenu() {
 
             case 'C':
             {
-                //closeAccount();
+                closeAccount(fileName);
             }
             break;
 
@@ -309,7 +309,8 @@ void BankApp::createAccount() {
 
     // append username to account number and write to file
     std::ofstream outputFile;
-    outputFile.open(userName + "-" + acctNumber + ".txt");
+    setFileName(userName + "-" + acctNumber + ".txt");
+    outputFile.open(getFileName());
     outputFile << acctNumber << "\n" << pin << "\n" << userName;
     outputFile << "\nType:" << accountType;
     outputFile << "\n" << "*" << accountType << "01-" << initialDeposit;
@@ -507,7 +508,7 @@ string BankApp::getAccountNumber() {
 }
 
 /*********************************************************************
-** Description:     getter function for username
+** Description:     getter function for username variable
 *********************************************************************/
 string BankApp::getUsername() {
     return username;
@@ -582,8 +583,8 @@ string BankApp::parseBalance(string accountAmount) {
 /*********************************************************************
 ** Description:     delete customer account by deleting file
 *********************************************************************/
-void BankApp::deleteAccount(string fileName) {
-    if (remove(" ") != 0)
+void BankApp::closeAccount(string fileName) {
+    if (remove(fileName.c_str()) != 0)
         cout << "Error closing account. Please contact customer service.";
     else
         cout << "Account successfully closed";

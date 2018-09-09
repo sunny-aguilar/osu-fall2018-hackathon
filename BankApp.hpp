@@ -44,7 +44,7 @@ class BankApp {
         void typeWriting(const string&, unsigned int timePerChar);
         vector<string> extractAccounts(vector<string> vect, char type);
         string parseBalance(string accountAmount);
-        void deleteAccount(string fileName);
+        void closeAccount(string fileName);
 };
 
 #endif                              // end of preprocessor directive
