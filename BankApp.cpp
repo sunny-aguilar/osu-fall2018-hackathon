@@ -696,6 +696,14 @@ void BankApp::updateAccount() {
                     temp << strTemp;
                 }
 
+                // rename file with new username
+                string oldFileName = getFileName();
+                string newFileName;
+                for (size_t i{0}; i < getUsername().length(); i++) {
+                    newFileName += oldFileName[i];
+                }
+                cout << "New File Name: " << newFileName << endl;
+
                 setUsername(newUserName);
 
                 cout << "File to remove: " << fileName << endl;

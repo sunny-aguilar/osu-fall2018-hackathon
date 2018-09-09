@@ -12,7 +12,7 @@
 
 int main() {
     BankApp bank;                               // create bank object
-    bank.introScreen();                         // show intro screen
+//    bank.introScreen();                         // show intro screen
     bank.mainMenu();
 
 
