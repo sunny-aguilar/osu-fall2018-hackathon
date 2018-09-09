@@ -6,6 +6,8 @@
 #include "BankApp.hpp"
 #include "Checkings.hpp"
 #include "Savings.hpp"
+#include "Transactions.hpp"
+#include "ViewAccount.hpp"
 #include <iostream>
 
 int main() {

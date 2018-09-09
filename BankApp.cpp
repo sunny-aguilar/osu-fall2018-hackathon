@@ -58,9 +58,11 @@ void BankApp::mainMenu()
         do
         {
             // Display banner
-            cout << "... ... ... ... ... ... ... ... ... ... ... ... ...\n"
-                    ":::::::::::: WELCOME TO OSU STATE BANK ::::::::::::\n"
-                    "... ... ... ... ... ... ... ... ... ... ... ... ...\n";
+            std::cout << R"(
+        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ 　        ▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬ MENU OPTIONS ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬
+        ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+            )" << '\n';
 
             // Display menu
             std::cout << "L - Log into account" << std::endl;
@@ -113,9 +115,11 @@ void BankApp::subMenu() {
 
     do {
         // Display banner
-        cout << "\n... ... ... ... ... ... ... ... ... ... ... ... ...\n"
-                ":::::::::: SELECT A CHOICE FROM THE MENU ::::::::::\n"
-                "... ... ... ... ... ... ... ... ... ... ... ... ...\n";
+        std::cout << R"(
+        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ 　        ▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬ MENU OPTIONS ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬
+        ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+            )" << '\n';
 
         // Display menu
         std::cout << "V - View your Account" << std::endl;
@@ -297,7 +301,11 @@ void BankApp::logIn() {                     // log in to account
 
     do {
         // show login banner
-        cout << "\n:::::: ACCOUNT LOGIN ::::::::::::::::::\n\n";
+        std::cout << R"(
+        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+ 　        ▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬ ACCOUNT LOGIN ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬
+        ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+            )" << '\n';
 
         // ask user for login info
         cout << "Enter your username: ";
@@ -359,18 +367,20 @@ void BankApp::logIn() {                     // log in to account
 void BankApp::loadUserData(const vector<string> &vect) {
     // set account number in private variable
     setAccountNumber(vect[0]);
+
     // set username in private variable
     setUsername(vect[2]);
+
     // set checkings account object
     // USE SETTER FUNCTIONS
 //    for (size_t pos{4}; pos < vect.size(); pos++) {
 //        // data extraction here
 //    }
 
-    checkingAccounts.push_back(vect[4]);
+//    checkingAccounts.push_back(vect[4]);
 
     // set savings account object
-    savingsAccounts.push_back();
+//    savingsAccounts.push_back();
 }
 
 /*********************************************************************
@@ -388,17 +398,18 @@ void BankApp::setUsername(string username) {
 }
 
 /*********************************************************************
+** Description:     setter function for checkings account
+*********************************************************************/
+void setCheckings(double ) {
+    // s
+}
+
+/*********************************************************************
 ** Description:     getter function for accountNumber
 *********************************************************************/
 string BankApp::getAccountNumber() {
     return accountNumber;
 }
-
-/*********************************************************************
-** Description:     setter function for checkings account
-*********************************************************************/
-
-
 
 /*********************************************************************
 ** Description:     getter function for username
