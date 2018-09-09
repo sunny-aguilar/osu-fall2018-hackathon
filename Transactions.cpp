@@ -6,6 +6,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include <cctype>
 #include "Transactions.hpp"
 
 /*********************************************************************
