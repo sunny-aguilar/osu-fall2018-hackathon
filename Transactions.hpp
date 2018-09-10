@@ -19,6 +19,7 @@ class Transaction {
         char AcctType;
         char AcctTypeFile;
         char feeApproval;
+        std::vector<std::string> AccountInfo;
         std::string fileName;
         std::string ACCTNUM;
         double SAVBAL;
