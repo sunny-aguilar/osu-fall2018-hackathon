@@ -212,7 +212,7 @@ void BankApp::subMenu() {
                 cout << "Enter withdrawl amount" << endl;
                 cin >> withdrawlAMT;
 
-                T1.Withdrawl(withdrawlAMT);
+                T1.Withdrawl(ACTYPE, withdrawlAMT);
             }
             break;
 
@@ -224,7 +224,7 @@ void BankApp::subMenu() {
 
             case 'S':
             {
-                //viewTransactions();
+                viewAccount V1(filename);
             }
             break;
 

@@ -8,7 +8,9 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include <sstream> 
+#include <sstream>
+#include <chrono>
+#include <ctime>
 #include "Transactions.hpp"
 
 /*********************************************************************
@@ -16,13 +18,13 @@
 *********************************************************************/
 Transaction::Transaction(std::string  INPUT_FILENAME){
 	std::string line;
-	std::string fileName = INPUT_FILENAME;
 	std::vector<std::string> AccountInfo;
-	std::string tempBAL;
+	std::string tempBAL = "";
 
 	//Defines i/o file stream objects
 	std::ifstream inputFile;
 	std::ofstream outputFile;
+	fileName = INPUT_FILENAME;
 	fileName = fileName + ".txt";
 
 	//Opens file
@@ -46,15 +48,15 @@ Transaction::Transaction(std::string  INPUT_FILENAME){
 	AcctTypeFile = std::toupper(AccountInfo[3][5]);
 
 	//Assigns Balances to Variables
-	if(AcctType == 'C'){
+	if(AcctTypeFile == 'C'){
 		for(int i=4; i<AccountInfo[4].length(); i++){
-			tempBAL = tempBAL + std::to_string(AccountInfo[4][i]);
+			tempBAL = tempBAL + AccountInfo[4][i];
 		}
 		CHKBAL = std::stod(tempBAL.c_str());
 	}
-	else if(AcctType == 'S'){
+	else if(AcctTypeFile == 'S'){
 		for(int i=4; i<AccountInfo[4].length(); i++){
-			tempBAL = tempBAL + std::to_string(AccountInfo[4][i]);
+			tempBAL = tempBAL + AccountInfo[4][i];
 		}
 		SAVBAL = std::stod(tempBAL.c_str());
 	}
@@ -82,11 +84,14 @@ Transaction::Transaction(std::string  INPUT_FILENAME){
 	             std::string("... ... ... ... ... ... ... ... ... ... ... ... ...\n");
 };
 
-double Transaction::Withdrawl(char AcctType, double transactionAMT){
-	//TAKE ABSOLUTE VALUE OF TRANSACTION AMT
-	transactionAMT = std::abs(transactionAMT);
+double Transaction::Withdrawl(char INPUTAcctType, double INPUTtransactionAMT){
+	std::ifstream inputFile;
+	std::ofstream outputFile;
 
-	AcctType = std::toupper(AcctType);
+	//TAKE ABSOLUTE VALUE OF TRANSACTION AMT
+	transactionAMT = std::abs(INPUTtransactionAMT);
+
+	AcctType = std::toupper(INPUTAcctType);
 
 	if(AcctType == 'C'){
 		/*********************************************************************
@@ -128,6 +133,33 @@ double Transaction::Withdrawl(char AcctType, double transactionAMT){
 				std::cout << "Transaction Complete" << std::endl;
 				std::cout << END_BANNER << std::endl;
 			}
+
+			//Add Timestamp to file
+			auto transactionTime = std::chrono::system_clock::now();
+			std::time_t dateTimeStamp = std::chrono::system_clock::to_time_t(transactionTime);
+
+			//Opens file
+			inputFile.open("T-" + fileName ".txt");
+
+			//Checks if inputFile can be opened
+			if(!inputFile){
+				outputFile.open("T-" + fileName ".txt");
+				outputFile << "Withdrawl AMT $" << transactionAMT << " " << std::ctime(&dateTimeStamp) << std::endl;
+				outputFile << "Overdraft Fee $20.00" << " " << std::ctime(&dateTimeStamp) << std::endl;
+				outputFile << "CHK Balance $" << CHKBAL << " " << std::ctime(&dateTimeStamp) << std::endl;
+			}
+			else{
+				inputFile << "Withdrawl AMT $" << transactionAMT << " " << std::ctime(&dateTimeStamp) << std::endl;
+				inputFile << "Overdraft Fee $20.00" << " " << std::ctime(&dateTimeStamp) << std::endl;
+				inputFile << "CHK Balance $" << CHKBAL << " " << std::ctime(&dateTimeStamp) << std::endl;
+			}
+			//Checks if output file can be opened
+			if(!outputFile){
+				std::cout << "Error creating file." << std::endl;
+			}
+
+			//Closes file stream objects
+			outputFile.close();
 	}
 	else if(AcctType == 'S'){
 		/*********************************************************************
@@ -169,6 +201,33 @@ double Transaction::Withdrawl(char AcctType, double transactionAMT){
 				std::cout << "Transaction Complete" << std::endl;
 				std::cout << END_BANNER << std::endl;
 			}
+
+			//Add Timestamp to file
+			auto transactionTime = std::chrono::system_clock::now();
+			std::time_t dateTimeStamp = std::chrono::system_clock::to_time_t(transactionTime);
+
+			//Opens file
+			inputFile.open("T-" + fileName ".txt");
+
+			//Checks if inputFile can be opened
+			if(!inputFile){
+				outputFile.open("T-" + fileName ".txt");
+				outputFile << "Withdrawl AMT $" << transactionAMT << " " << std::ctime(&dateTimeStamp) << std::endl;
+				outputFile << "Overdraft Fee $20.00" << " " << std::ctime(&dateTimeStamp) << std::endl;
+				outputFile << "SAV Balance $" << SAVBAL << " " << std::ctime(&dateTimeStamp) << std::endl;
+			}
+			else{
+				inputFile << "Withdrawl AMT $" << transactionAMT << " " << std::ctime(&dateTimeStamp) << std::endl;
+				inputFile << "Overdraft Fee $20.00" << " " << std::ctime(&dateTimeStamp) << std::endl;
+				inputFile << "SAV Balance $" << SAVBAL << " " << std::ctime(&dateTimeStamp) << std::endl;
+			}
+			//Checks if output file can be opened
+			if(!outputFile){
+				std::cout << "Error creating file." << std::endl;
+			}
+
+			//Closes file stream objects
+			outputFile.close();
 	}
 	else{
 		std::cout << "Account type not recognized" << std::endl;
@@ -179,11 +238,11 @@ double Transaction::Withdrawl(char AcctType, double transactionAMT){
 
 };
 
-double Transaction::Deposit(char, double transactionAMT){
+double Transaction::Deposit(char INPUTAcctType, double INPUTtransactionAMT){
 	//TAKE ABSOLUTE VALUE OF TRANSACTION AMT
-	transactionAMT = std::abs(transactionAMT);
+	transactionAMT = std::abs(INPUTtransactionAMT);
 
-	AcctType = std::toupper(AcctType);
+	AcctType = std::toupper(INPUTAcctType);
 	/*********************************************************************
 	** CHECKING ACCOUNT WITHDRAWL
 	*********************************************************************/
@@ -196,6 +255,31 @@ double Transaction::Deposit(char, double transactionAMT){
 		std::cout << "REMAINING BALANCE: $" << CHKBAL << std::endl;
 		std::cout << "Transaction Complete" << std::endl;
 		std::cout << END_BANNER << std::endl;
+
+		//Add Timestamp to file
+		auto transactionTime = std::chrono::system_clock::now();
+		std::time_t dateTimeStamp = std::chrono::system_clock::to_time_t(transactionTime);
+
+		//Opens file
+		inputFile.open("T-" + fileName ".txt");
+
+		//Checks if inputFile can be opened
+		if(!inputFile){
+			outputFile.open("T-" + fileName ".txt");
+			outputFile << "Deposit AMT $" << transactionAMT << " " << std::ctime(&dateTimeStamp) << std::endl;
+			outputFile << "CHK Balance $" << CHKBAL << " " << std::ctime(&dateTimeStamp) << std::endl;
+		}
+		else{
+			inputFile << "Deposit AMT $" << transactionAMT << " " << std::ctime(&dateTimeStamp) << std::endl;
+			inputFile << "CHK Balance $" << CHKBAL << " " << std::ctime(&dateTimeStamp) << std::endl;
+		}
+		//Checks if output file can be opened
+		if(!outputFile){
+			std::cout << "Error creating file." << std::endl;
+		}
+
+		//Closes file stream objects
+		outputFile.close();
 	}
 	/*********************************************************************
 	** SAVINGS ACCOUNT WITHDRAWL
@@ -209,10 +293,35 @@ double Transaction::Deposit(char, double transactionAMT){
 		std::cout << "REMAINING BALANCE: $" << SAVBAL << std::endl;
 		std::cout << "Transaction Complete" << std::endl;
 		std::cout << END_BANNER << std::endl;
+
+		//Add Timestamp to file
+		auto transactionTime = std::chrono::system_clock::now();
+		std::time_t dateTimeStamp = std::chrono::system_clock::to_time_t(transactionTime);
+
+		//Opens file
+		inputFile.open("T-" + fileName ".txt");
+
+		//Checks if inputFile can be opened
+		if(!inputFile){
+			outputFile.open("T-" + fileName ".txt");
+			outputFile << "Deposit AMT $" << transactionAMT << " " << std::ctime(&dateTimeStamp) << std::endl;
+			outputFile << "SAV Balance $" << SAVBAL << " " << std::ctime(&dateTimeStamp) << std::endl;
+		}
+		else{
+			inputFile << "Deposit AMT $" << transactionAMT << " " << std::ctime(&dateTimeStamp) << std::endl;
+			inputFile << "SAV Balance $" << SAVBAL << " " << std::ctime(&dateTimeStamp) << std::endl;
+		}
+		//Checks if output file can be opened
+		if(!outputFile){
+			std::cout << "Error creating file." << std::endl;
+		}
+
+		//Closes file stream objects
+		outputFile.close();
 	}
 	else{
 		std::cout << "Account type not recognized" << std::endl;
-		std::cout << "Withdrawl Transaction Cancelled" << std::endl;
+		std::cout << "Deposit Transaction Cancelled" << std::endl;
 	}
 
 	return 0;

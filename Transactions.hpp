@@ -19,7 +19,7 @@ class Transaction {
         char AcctType;
         char AcctTypeFile;
         char feeApproval;
-        std::string FileName;
+        std::string fileName;
         std::string ACCTNUM;
         double SAVBAL;
         double CHKBAL;

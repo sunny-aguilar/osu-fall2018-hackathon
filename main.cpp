@@ -15,6 +15,5 @@ int main() {
     bank.introScreen();                         // show intro screen
     bank.mainMenu();
 
-
     return 0;
 }
