@@ -660,8 +660,9 @@ void BankApp::updateAccount() {
     cout << "Let's update your account." << endl;
     do {
         cout << "1. Change your username\n";
-        cout << "2. Change your pin number\n\n";
-        cout << "Enter Selction: ";
+        cout << "2. Change your pin number\n";
+        cout << "3. Go back to main menu\n\n";
+        cout << "Enter Selection: ";
         cin >> selection;
         cin.ignore();
 
@@ -730,6 +731,7 @@ void BankApp::updateAccount() {
                 string newPIN;
                 cout << "Create a 4 digit pin (0-9): ";
                 cin >> newPIN;
+                cin.ignore();
 
                 // pin validation using regex
                 std::regex pinPattern("[0-9]{4}");
@@ -737,6 +739,7 @@ void BankApp::updateAccount() {
                 while (!std::regex_match(newPIN, n, pinPattern)) {
                     cout << "Error! Create a pin 4 characters lond and no spacing: ";
                     cin >> newPIN;
+                    cin.ignore();
                 }
 
                 // write new pin to file
@@ -776,8 +779,11 @@ void BankApp::updateAccount() {
 
                 break;
             }
+            case 3:
+                subMenu();
+                break;
             default:
-                cout << "Please select 1 or 2, try again" << endl;
+                cout << "Please select 1, 2 or 3, try again" << endl;
         }
 
         cout << "Would you like to update your info again? y/n " << endl;
