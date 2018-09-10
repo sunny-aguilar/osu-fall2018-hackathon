@@ -54,7 +54,7 @@ double Transaction::Withdrawl(char AcctType, double transactionAMT){
 	}
 	//ACCT HAS SUFFICIENT FUNDS
 	else{
-<<<<<<< HEAD
+
 		std::cout << "Account Type not recognized" << std::endl;
 	}
 
@@ -132,7 +132,9 @@ double Transaction::Withdrawl(char INPUTAcctType, double INPUTtransactionAMT){
 			//Updating Balances in text file
 			inputFile.open(fileName);
 			tempAcctHolder = AccountInfo[4][3];
-			AccountInfo[4] = tempAcctHolder + CHKBAL;
+
+			AccountInfo[4] = tempAcctHolder + std::to_string(CHKBAL);
+
 
 			//Add Timestamp to file
 			auto transactionTime = std::chrono::system_clock::now();
@@ -144,14 +146,14 @@ double Transaction::Withdrawl(char INPUTAcctType, double INPUTtransactionAMT){
 			//Checks if inputFile can be opened
 			if(!inputFile){
 				outputFile.open("T-" + fileName);
-				outputFile << "Withdrawl AMT $" << transactionAMT << " " << std::ctime(&dateTimeStamp) << std::endl;
-				outputFile << "Overdraft Fee $20.00" << " " << std::ctime(&dateTimeStamp) << std::endl;
-				outputFile << "CHK Balance $" << CHKBAL << " " << std::ctime(&dateTimeStamp) << std::endl;
+				outputFile << "Withdrawl AMT $" + std::to_string(transactionAMT) + " " + std::to_string(std::ctime(&dateTimeStamp));
+				outputFile << "Overdraft Fee $20.00" + " " + std::to_string(std::ctime(&dateTimeStamp));
+				outputFile << "CHK Balance $" + std::to_string(CHKBAL) + " " + std::to_string(std::ctime(&dateTimeStamp));
 			}
 			else{
-				inputFile << "Withdrawl AMT $" << transactionAMT << " " << std::ctime(&dateTimeStamp) << std::endl;
-				inputFile << "Overdraft Fee $20.00" << " " << std::ctime(&dateTimeStamp) << std::endl;
-				inputFile << "CHK Balance $" << CHKBAL << " " << std::ctime(&dateTimeStamp) << std::endl;
+				inputFile << "Withdrawl AMT $" + std::to_string(transactionAMT) + " " + std::to_string(std::ctime(&dateTimeStamp));
+				inputFile << "Overdraft Fee $20.00" + " " + std::to_string(std::ctime(&dateTimeStamp));
+				inputFile << "CHK Balance $" + std::to_string(CHKBAL) + " " + std::to_string(std::ctime(&dateTimeStamp));
 			}
 			//Checks if output file can be opened
 			if(!outputFile){
@@ -206,7 +208,9 @@ double Transaction::Withdrawl(char INPUTAcctType, double INPUTtransactionAMT){
 			//Updating Balances in text file
 			inputFile.open(fileName);
 			tempAcctHolder = AccountInfo[4][3];
-			AccountInfo[4] = tempAcctHolder + SAVBAL;
+
+			AccountInfo[4] = tempAcctHolder + std::to_string(SAVBAL);
+
 
 			//Add Timestamp to file
 			auto transactionTime = std::chrono::system_clock::now();
@@ -218,14 +222,14 @@ double Transaction::Withdrawl(char INPUTAcctType, double INPUTtransactionAMT){
 			//Checks if inputFile can be opened
 			if(!inputFile){
 				outputFile.open("T-" + fileName);
-				outputFile << "Withdrawl AMT $" << transactionAMT << " " << std::ctime(&dateTimeStamp) << std::endl;
-				outputFile << "Overdraft Fee $20.00" << " " << std::ctime(&dateTimeStamp) << std::endl;
-				outputFile << "SAV Balance $" << SAVBAL << " " << std::ctime(&dateTimeStamp) << std::endl;
+				outputFile << "Withdrawl AMT $" + std::to_string(transactionAMT) + " " + std::to_string(std::ctime(&dateTimeStamp));
+				outputFile << "Overdraft Fee $20.00" + " " + std::to_string(std::ctime(&dateTimeStamp));
+				outputFile << "SAV Balance $" + std::to_string(SAVBAL) + " " + std::to_string(std::ctime(&dateTimeStamp));
 			}
 			else{
-				inputFile << "Withdrawl AMT $" << transactionAMT << " " << std::ctime(&dateTimeStamp) << std::endl;
-				inputFile << "Overdraft Fee $20.00" << " " << std::ctime(&dateTimeStamp) << std::endl;
-				inputFile << "SAV Balance $" << SAVBAL << " " << std::ctime(&dateTimeStamp) << std::endl;
+				inputFile << "Withdrawl AMT $" + std::to_string(transactionAMT) + " " + std::to_string(std::ctime(&dateTimeStamp));
+				inputFile << "Overdraft Fee $20.00" + " " + std::to_string(std::ctime(&dateTimeStamp));
+				inputFile << "SAV Balance $" + std::to_string(SAVBAL) + " " + std::to_string(std::ctime(&dateTimeStamp));
 			}
 			//Checks if output file can be opened
 			if(!outputFile){
@@ -246,6 +250,11 @@ double Transaction::Withdrawl(char INPUTAcctType, double INPUTtransactionAMT){
 };
 
 double Transaction::Deposit(char INPUTAcctType, double INPUTtransactionAMT){
+	//Defines i/o file stream objects
+	std::ifstream inputFile;
+	std::ofstream outputFile;
+	std::string tempAcctHolder;
+
 	//TAKE ABSOLUTE VALUE OF TRANSACTION AMT
 	transactionAMT = std::abs(INPUTtransactionAMT);
 
@@ -257,18 +266,56 @@ double Transaction::Deposit(char INPUTAcctType, double INPUTtransactionAMT){
 		//DEPOSITS FUNDS INTO ACCT
 		CHKBAL = CHKBAL + transactionAMT;
 		std::cout << DEPOSIT_BANNER << std::endl;
-=======
+
 		CHKBAL = CHKBAL - transactionAMT;
 		std::cout << WITHDRAWL_BANNER << std::endl;
->>>>>>> 0895bae71b16ab8701740a89911b11f4418186bb
+
 		std::cout << CHKBANNER << std::endl;
 		std::cout << "WITHDRAWL AMOUNT: $" << transactionAMT << std::endl;
 		std::cout << "REMAINING BALANCE: $" << CHKBAL << std::endl;
 		std::cout << "Transaction Complete" << std::endl;
 		std::cout << END_BANNER << std::endl;
+
+
+		//Updating Balances in text file
+		inputFile.open(fileName);
+		tempAcctHolder = AccountInfo[4][3];
+		AccountInfo[4] = tempAcctHolder + std::to_string(CHKBAL);
+
+		//Add Timestamp to file
+		auto transactionTime = std::chrono::system_clock::now();
+		std::time_t dateTimeStamp = std::chrono::system_clock::to_time_t(transactionTime);
+
+		//Opens file
+		inputFile.open("T-" + fileName);
+
+		//Checks if inputFile can be opened
+		if(!inputFile){
+			outputFile.open("T-" + fileName);
+			outputFile << "Deposit AMT $" + std::to_string(transactionAMT) + " " + std::to_string(std::ctime(&dateTimeStamp));
+			outputFile << "CHK Balance $" + std::to_string(CHKBAL) + " " + std::to_string(std::ctime(&dateTimeStamp));
+		}
+		else{
+			inputFile << "Deposit AMT $" + std::to_string(transactionAMT) + " " + std::to_string(std::ctime(&dateTimeStamp));
+			inputFile << "CHK Balance $" + std::to_string(CHKBAL) + " " + std::to_string(std::ctime(&dateTimeStamp));
+		}
+		//Checks if output file can be opened
+		if(!outputFile){
+			std::cout << "Error creating file." << std::endl;
+		}
+
+		//Closes file stream objects
+		outputFile.close();
+		inputFile.close();
+
 	}
 
-	return 0;
+
+		//Updating Balances in text file
+		inputFile.open(fileName);
+		tempAcctHolder = AccountInfo[4][3];
+		AccountInfo[4] = tempAcctHolder + std::to_string(SAVBAL);
+
 
 };
 
@@ -279,7 +326,22 @@ double Transaction::Deposit(char AcctType, double transactionAMT){
 	//save transaction deposit in file
 	//Take user back to dashboard
 
-//ONLY FOR CHECKING ACCOUNT RIGHT NOW
+
+		//Checks if inputFile can be opened
+		if(!inputFile){
+			outputFile.open("T-" + fileName);
+			outputFile << "Deposit AMT $" + std::to_string(transactionAMT) + " " + std::to_string(std::ctime(&dateTimeStamp));
+			outputFile << "SAV Balance $" + std::to_string(SAVBAL) + " " + std::to_string(std::ctime(&dateTimeStamp));
+		}
+		else{
+			inputFile << "Deposit AMT $" + std::to_string(transactionAMT) + " " << std::to_string(std::ctime(&dateTimeStamp));
+			inputFile << "SAV Balance $" + std::to_string(SAVBAL) + " " + std::to_string(std::ctime(&dateTimeStamp));
+		}
+		//Checks if output file can be opened
+		if(!outputFile){
+			std::cout << "Error creating file." << std::endl;
+		}
+
 
 	//TAKE ABSOLUTE VALUE OF TRANSACTION AMT
 	transactionAMT = std::abs(transactionAMT);
