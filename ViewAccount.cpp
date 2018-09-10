@@ -4,17 +4,14 @@
 ** Description:     View Account class implementation file
 *********************************************************************/
 #include <iostream>
-#include <cmath>
-#include <fstream>
 #include <string>
-#include <vector>
-#include <sstream> 
 #include "ViewAccount.hpp"
 
 /*********************************************************************
 ** Description:     1-arg constructor
 *********************************************************************/
 //Default Constructor
+
 viewAccount::viewAccount(std::string INPUT_FILENAME){
 	std::string line;
 	std::string fileName = INPUT_FILENAME;
@@ -84,4 +81,5 @@ viewAccount::viewAccount(std::string INPUT_FILENAME){
 
 	//END ACCOUNT INFO OUTPUT
 	std::cout << END_BANNER << std::endl;
+
 };

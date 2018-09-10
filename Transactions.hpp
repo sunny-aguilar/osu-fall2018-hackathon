@@ -8,19 +8,14 @@
 
 //#include "BankApp.hpp"
 #include <iostream>
-#include <cmath>
-#include <fstream>
 #include <string>
-#include <vector>
+#include <cmath>
 
 class Transaction {
     private:
         double transactionAMT;
         char AcctType;
-        char AcctTypeFile;
         char feeApproval;
-        std::vector<std::string> AccountInfo;
-        std::string fileName;
         std::string ACCTNUM;
         double SAVBAL;
         double CHKBAL;
@@ -32,7 +27,25 @@ class Transaction {
 
     public:
     	//Default Constructor
-        Transaction(std::string);
+        Transaction(std::string INPUT_ACCTNUM, double INPUT_SAVBAL, double INPUT_CHKBAL){
+        	ACCTNUM = INPUT_ACCTNUM;
+        	SAVBAL = INPUT_SAVBAL;
+        	CHKBAL = INPUT_CHKBAL;
+            CHKBANNER = std::string("... ... ... ... ... ... ... ... ... ... ... ... ...\n") +
+                        std::string(":::::::::::::     CHECKING ACCOUNT     ::::::::::::\n") +
+                        std::string("... ... ... ... ... ... ... ... ... ... ... ... ...\n");
+            SAVBANNER = std::string("... ... ... ... ... ... ... ... ... ... ... ... ...\n") +
+                        std::string(":::::::::::::     SAVINGS ACCOUNT     :::::::::::::\n") +
+                        std::string("... ... ... ... ... ... ... ... ... ... ... ... ...\n");
+            DEPOSIT_BANNER = std::string("... ... ... ... ... ... ... ... ... ... ... ... ...\n") +
+                             std::string("::::::::::::::::: DEPOSIT SUMMARY :::::::::::::::::\n") +
+                             std::string("... ... ... ... ... ... ... ... ... ... ... ... ...\n");
+            WITHDRAWL_BANNER =  std::string("... ... ... ... ... ... ... ... ... ... ... ... ...\n") +
+                                std::string(":::::::::::::::: WITHDRAWL SUMMARY ::::::::::::::::\n") +
+                                std::string("... ... ... ... ... ... ... ... ... ... ... ... ...\n");
+            END_BANNER = std::string("... ... ... ... ... ... ... ... ... ... ... ... ...\n") +
+                         std::string("... ... ... ... ... ... ... ... ... ... ... ... ...\n");
+        };
         // add additional member functions here
         double Withdrawl(char, double);
         double Deposit(char, double);
