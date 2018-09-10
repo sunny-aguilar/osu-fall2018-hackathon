@@ -18,8 +18,18 @@
 viewAccount::viewAccount(std::string INPUT_FILENAME){
 	std::string line;
 	std::string fileName = INPUT_FILENAME;
-	std::vector<std::string> AccountInfo;
 	std::string tempBAL = "";
+	double transactionAMT;
+    char AcctType;
+    char AcctTypeFile;
+    char feeApproval;
+    std::vector<std::string> AccountInfo;
+    std::string ACCTNUM;
+    double SAVBAL;
+    double CHKBAL;
+    std::string END_BANNER;
+    END_BANNER = std::string("... ... ... ... ... ... ... ... ... ... ... ... ...\n") +
+	             std::string("... ... ... ... ... ... ... ... ... ... ... ... ...\n");
 
 	//Defines i/o file stream objects
 	std::ifstream inputFile;
