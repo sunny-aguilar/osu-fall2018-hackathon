@@ -16,7 +16,7 @@ class viewAccount {
 
     public:
     	//Default Constructor
-        viewAccount(std::string);
+        viewAccount();
         // add additional member functions here
 };
 
