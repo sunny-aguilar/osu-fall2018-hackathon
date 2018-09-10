@@ -615,17 +615,21 @@ void BankApp::closeAccount(string fileName) {
     cout << "Filename: " << fileName << endl;
     char confirm{'n'};
     cout << "We are sad to see you go. "
-            "Are you sure you want to close your account? ";
+            "Are you sure you want to close your account? y/n";
 
     cin >> confirm;
     cin.ignore();
 
-
-    if (remove(fileName.c_str()) != 0)
-        cout << "Error closing account. Please contact customer service.";
+    if (toupper(confirm) == 'Y') {
+        if (remove(fileName.c_str()) != 0)
+            cout << "Error closing account. Please contact customer service.";
+        else {
+            cout << "Account successfully closed";
+            mainMenu();
+        }
+    }
     else {
-        cout << "Account successfully closed";
-        mainMenu();
+        subMenu();
     }
 }
 
