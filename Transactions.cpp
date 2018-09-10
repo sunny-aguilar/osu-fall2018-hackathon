@@ -135,8 +135,8 @@ double Transaction::Withdrawl(char INPUTAcctType, double INPUTtransactionAMT){
 			}
 
 			//Updating Balances in text file
-			inputFile.open(fileName)
-			tempAcctHolder = AccountInfo[4][3]
+			inputFile.open(fileName);
+			tempAcctHolder = AccountInfo[4][3];
 			AccountInfo[4] = tempAcctHolder + CHKBAL;
 
 			//Add Timestamp to file
@@ -209,8 +209,8 @@ double Transaction::Withdrawl(char INPUTAcctType, double INPUTtransactionAMT){
 			}
 			
 			//Updating Balances in text file
-			inputFile.open(fileName)
-			tempAcctHolder = AccountInfo[4][3]
+			inputFile.open(fileName);
+			tempAcctHolder = AccountInfo[4][3];
 			AccountInfo[4] = tempAcctHolder + SAVBAL;
 
 			//Add Timestamp to file
